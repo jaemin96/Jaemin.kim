@@ -1,0 +1,6 @@
+/* Functions */
+@mixin components-button-style($color, $width: 1.5rem, $height) {
+  color: $color;
+  width: $width;
+  height: $height;
+}

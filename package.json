@@ -1,0 +1,36 @@
+{
+  "name": "jaem-dev",
+  "version": "1.0.0",
+  "description": "Jaemin96 develop project",
+  "main": "index.js",
+  "repository": "https://github.com/jaemin96/jaem_dev",
+  "author": "jaemin <jaemin96@users.noreply.github.com>",
+  "license": "MIT",
+  "packageManager": "yarn@1.22.19",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0",
+    "yarn": ">=1.22.0"
+  },
+  "eslintConfig": {
+    "extends": []
+  },
+  "private": "true",
+  "scripts": {
+    "lint": "eslint .",
+    "style:watch": "sass --watch scss/main.scss scss/main.css"
+  },
+  "dependencies": {
+    "node-sass": "^8.0.0",
+    "sass": "^1.57.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.3"
+  }
+}

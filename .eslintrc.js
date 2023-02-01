@@ -10,11 +10,12 @@ module.exports = {
     'eslint:recommended',
     'eslint-config-prettier',
     'plugin:prettier/recommended',
+    'next/core-web-vitals',
     'prettier',
-    // 'plugin:react/recommended'
-    // 'plugin:react-hooks/recommended',
-    // 'plugin:jsx-a11y/strict',
-    // 'plugin:testing-library/react',
+    // 'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:jsx-a11y/strict',
+    'plugin:testing-library/react',
   ],
   overrides: [
     // {
@@ -27,18 +28,12 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: [
-    'import',
-    '@typescript-eslint',
-    // "react"
-    // 'react-hooks',
-    // 'jsx-a11y',
-  ],
+  plugins: ['import', '@typescript-eslint', 'react', 'react-hooks', 'jsx-a11y'],
   settings: {
     // # react version을 자동으로 탐지 - 최신 버전
-    // react: {
-    //   version: 'detect',
-    // },
+    react: {
+      version: 'detect',
+    },
   },
   rules: {
     'no-console': 'warn',

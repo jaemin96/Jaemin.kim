@@ -1,12 +1,32 @@
 #build
 /build
 
-#node module
+# dependencies
 /node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
 
 #env
 .env
 .env.*
+
+#next
+/.next
+
+# vercel
+.vercel
 
 #lock
 *.lock

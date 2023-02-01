@@ -1,0 +1,11 @@
+#build
+/build
+
+#node module
+/node_modules
+
+#env
+.env
+.env.*
+
+

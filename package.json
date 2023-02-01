@@ -1,0 +1,9 @@
+{
+  "name": "jaem-dev",
+  "version": "1.0.0",
+  "description": "Jaemin96 develop project",
+  "main": "index.js",
+  "repository": "https://github.com/jaemin96/jaem_dev",
+  "author": "jaemin <jaemin96@users.noreply.github.com>",
+  "license": "MIT"
+}

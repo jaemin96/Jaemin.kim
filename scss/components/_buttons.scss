@@ -1,0 +1,6 @@
+@import '../abstracts/variables';
+
+button {
+  @include components-button-style($primary-color, 10rem, 2rem);
+  white-space: nowrap;
+}

@@ -2,7 +2,7 @@ import { Navigator } from '../components/header';
 
 const Header = () => {
   return (
-    <div className="header">
+    <div id="header">
       <Navigator />
     </div>
   );

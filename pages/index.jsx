@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { Header } from '../containers';
 
 const Home = () => {
   return (
@@ -7,7 +6,6 @@ const Home = () => {
       <Head>
         <title>Jaemin.kim</title>
       </Head>
-      <Header />
     </div>
   );
 };

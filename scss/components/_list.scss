@@ -1,0 +1,10 @@
+@mixin Flex($direction, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+.contacts {
+  @include Flex(row, 0.3rem);
+  list-style: none;
+}

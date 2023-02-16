@@ -1,9 +1,10 @@
-import { Navigator } from '../components/header';
+import { Navigator, Contacts } from '../components/header';
 
 const Header = () => {
   return (
     <div id="header">
       <Navigator />
+      <Contacts />
     </div>
   );
 };

@@ -1,7 +1,3 @@
-$primary-color: #24b600;
-$Header-one-color: red;
-$nav-one-color: aliceblue;
-
 /* === Pure Black & White === */
 $black: #0f0f0f;
 $white: #fdfdfd;
@@ -95,3 +91,7 @@ $info-400: #6690ff;
 $info-300: #84a9ff;
 $info-200: #adc8ff;
 $info-100: #d6e4ff;
+
+$primary-color: #24b600;
+$Header-one-color: $info-100;
+$nav-one-color: aliceblue;

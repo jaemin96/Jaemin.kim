@@ -1,17 +1,10 @@
 import Link from 'next/link';
-
-const navItems = [
-  { key: 'about', label: 'About me' },
-  { key: 'skill', label: 'Skill' },
-  { key: 'project', label: 'Project' },
-  { key: 'career', label: 'Career' },
-  { key: 'contact', label: 'Contact' },
-];
+import { NavItems } from '../../asset';
 
 export const Navigator = () => {
   return (
     <ul id="nav">
-      {navItems?.map((item, idx) => {
+      {NavItems?.map((item, idx) => {
         return (
           <li className="nav__item" key={`navItems__${idx}__${item.key}`}>
             <Link href={`/${item.key}`}>{item.label}</Link>

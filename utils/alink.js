@@ -5,7 +5,7 @@ export const Alink = (props) => {
 
   return (
     <Link href={`${url}`} target="_blank">
-      {...children}
+      {children}
     </Link>
   );
 };

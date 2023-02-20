@@ -1,7 +1,3 @@
-# jaem_dev
+# 김재민
 
-## Install
-
-```
-$ yarn install
-```
+## 기술스텍

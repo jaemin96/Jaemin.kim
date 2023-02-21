@@ -1,10 +1,4 @@
 /* Grid style */
-@mixin Flex($direction, $gap) {
-  display: flex;
-  flex-direction: $direction;
-  gap: $gap;
-}
-
 #__next {
   display: grid;
   grid-template-columns: 22% 78%;

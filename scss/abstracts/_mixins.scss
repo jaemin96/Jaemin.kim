@@ -4,3 +4,9 @@
   width: $width;
   height: $height;
 }
+
+@mixin Flex($direction, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+}

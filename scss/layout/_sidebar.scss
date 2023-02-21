@@ -1,5 +1,5 @@
 /* Sidebar style */
 #header {
-  display: flex;
+  @include Flex(row, 2rem);
   padding: 2rem;
 }

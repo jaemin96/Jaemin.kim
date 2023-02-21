@@ -1,24 +1,38 @@
-@mixin Flex($direction, $gap) {
-  display: flex;
-  flex-direction: $direction;
-  gap: $gap;
-}
-
 .contacts {
-  @include Flex(column, 0.3rem);
+  @include Flex(column, 0.6rem);
   list-style: none;
+  justify-content: center;
 
   &_phone,
   &_email {
-    @include Flex(row, 0.3rem);
+    @include Flex(row, 0.5rem);
+    align-items: center;
+    span {
+      white-space: nowrap;
+      letter-spacing: 0.1rem;
+    }
+    .before {
+      @include Flex(row, 0.5rem);
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
   }
 
   &_social {
-    ul {
-      @include Flex(row, 0.3rem);
-      align-items: center;
-      li {
-        list-style: none;
+    @include Flex(row, 0.77rem);
+    align-items: center;
+    li {
+      list-style: none;
+
+      img {
+        width: 1.85rem;
+        height: 1.85rem;
       }
     }
   }

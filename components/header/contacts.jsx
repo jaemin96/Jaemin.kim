@@ -2,7 +2,6 @@ import { Contact } from '../../asset';
 import { Alink } from '../../utils';
 
 export const Contacts = (props) => {
-  console.log({ Contact });
   return (
     <>
       <ul className="contacts">
@@ -11,14 +10,14 @@ export const Contacts = (props) => {
             <img src="/assets/image/Tel.svg" alt="phone" />
             <div>|</div>
           </div>
-          <span>{Contact?.phoneNumber}</span>
+          <a href={`tel:${Contact?.phoneNumber}`}>{Contact?.phoneNumber}</a>
         </li>
         <li className="contacts_email">
           <div className="before">
             <img src="/assets/image/Email.svg" alt="email" />
             <div>|</div>
           </div>
-          <span>{Contact?.email}</span>
+          <a href={`mailto:${Contact?.email}`}>{Contact?.email}</a>
         </li>
       </ul>
       <ul className="contacts_social">

@@ -9,13 +9,41 @@
   #header {
     @include Flex(column, 0.5rem);
     width: 100%;
-    height: 100vh;
     background-color: $Header-one-color;
   }
 
   #content {
     width: 100%;
-    height: 100vh;
     background-color: $nav-one-color;
+  }
+}
+
+@media screen and (max-width: '768px') {
+  #__next {
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    #header {
+      @include GridArea(1, 5, 0, 0);
+      @include Flex(row, 2rem);
+    }
+  }
+
+  #content {
+    @include GridArea(1, 5, 2, 6);
+  }
+}
+
+@media screen and (max-width: '1024px') {
+  #__next {
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    #header {
+      @include GridArea(1, 5, 0, 0);
+      @include Flex(row, 2rem);
+    }
+  }
+
+  #content {
+    @include GridArea(1, 5, 2, 6);
   }
 }

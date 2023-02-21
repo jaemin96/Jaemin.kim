@@ -7,9 +7,10 @@
   &_email {
     @include Flex(row, 0.5rem);
     align-items: center;
-    span {
+    a {
       white-space: nowrap;
       letter-spacing: 0.1rem;
+      font-weight: 500;
     }
     .before {
       @include Flex(row, 0.5rem);

@@ -3,16 +3,16 @@ import { Alink } from '../../utils';
 
 export const Contacts = (props) => {
   return (
-    <>
-      <ul className="contacts">
-        <li className="contacts_phone">
+    <div id="contacts">
+      <ul className="contact">
+        <li className="contact-phone">
           <div className="before">
             <img src="/assets/image/Tel.svg" alt="phone" />
             <div>|</div>
           </div>
           <a href={`tel:${Contact?.phoneNumber}`}>{Contact?.phoneNumber}</a>
         </li>
-        <li className="contacts_email">
+        <li className="contact-email">
           <div className="before">
             <img src="/assets/image/Email.svg" alt="email" />
             <div>|</div>
@@ -20,7 +20,7 @@ export const Contacts = (props) => {
           <a href={`mailto:${Contact?.email}`}>{Contact?.email}</a>
         </li>
       </ul>
-      <ul className="contacts_social">
+      <ul className="social">
         {Contact?.social?.map((element) => {
           return (
             <li key={element?.key}>
@@ -31,6 +31,6 @@ export const Contacts = (props) => {
           );
         })}
       </ul>
-    </>
+    </div>
   );
 };

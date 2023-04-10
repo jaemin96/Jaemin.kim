@@ -1,10 +1,9 @@
-import { Header } from '../containers';
+import React from 'react';
 import '../scss/main.scss';
 
 const App = ({ Component, pageProps }) => {
   return (
     <>
-      <Header />
       <Component {...pageProps} />
     </>
   );

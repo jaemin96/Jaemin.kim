@@ -1,8 +1,7 @@
-import { Contact } from '../../asset';
-import { Alink } from '../../utils';
+import { Contact } from '../../../asset';
+import { Alink } from '../../../utils';
 
-export const Contacts = (props) => {
-  console.log({ Contact });
+export const Contacts = () => {
   return (
     <ul className="contacts">
       <li className="contacts_phone">

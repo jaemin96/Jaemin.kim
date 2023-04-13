@@ -10,10 +10,11 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest # workflow 실행환경 - ubuntu (macos & window 대체 가능)
+    steps:
       - uses: actions/checkout@v2 # 깃 소스코드 clone 수행
       # node 설치
-      - name: Set Node.js 
-        uses: actions/setup-node@v2 
+      - name: Set Node.js
+        uses: actions/setup-node@v2
         with:
           node-version: '16.15.1' # 현재 개발에 사용되는 노드버전 기재함.
 

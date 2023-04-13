@@ -1,7 +1,3 @@
-# jaem_dev
+# 웹 포트폴리오
 
-## Install
-
-```
-$ yarn install
-```
+## 릴리즈

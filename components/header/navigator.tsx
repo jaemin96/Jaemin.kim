@@ -13,7 +13,7 @@ export const Navigator = () => {
     <ul id="nav">
       {navItems?.map((item, idx) => {
         return (
-          <li className="nav__item" key={`navItems__${idx}__${item.key}`}>
+          <li className="" key={`navItems__${idx}__${item.key}`}>
             <Link href={`/${item.key}`}>{item.label}</Link>
           </li>
         );

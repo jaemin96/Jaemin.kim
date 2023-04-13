@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head';
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
       <Head>
         <title>Jaemin.kim</title>
       </Head>
+      <div>home</div>
     </div>
   );
 };

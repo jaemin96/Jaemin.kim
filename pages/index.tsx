@@ -7,6 +7,7 @@ const Home = () => {
       <Head>
         <title>Jaemin.kim</title>
       </Head>
+      <div>home</div>
     </div>
   );
 };

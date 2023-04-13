@@ -29,6 +29,7 @@
     "sass": "^1.57.1"
   },
   "devDependencies": {
+    "@types/node": "^18.15.11",
     "@types/react": "18.0.33",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "@typescript-eslint/parser": "^5.49.0",
@@ -38,6 +39,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-testing-library": "^5.10.0",
-    "prettier": "^2.8.3"
+    "prettier": "^2.8.3",
+    "typescript": "^5.0.4"
   }
 }

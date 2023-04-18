@@ -1,0 +1,15 @@
+#nav_top {
+  list-style: none;
+  .nav_top-item {
+    .nav_link {
+      color: $wgray-4;
+    }
+  }
+
+  .nav_top-item.selected {
+    .nav_link {
+      color: $black;
+      border-bottom: 1px solid $black;
+    }
+  }
+}

@@ -1,1 +1,6 @@
 /* Header style */
+#header_container {
+  display: flex;
+  padding: 2rem;
+  background-color: $cgray-6;
+}

@@ -1,5 +1,8 @@
-#nav_top {
+.nav_top {
+  display: flex;
+  gap: 1rem;
   list-style: none;
+  background-color: $cgray-2;
   .nav_top-item {
     .nav_link {
       color: $wgray-4;

@@ -30,7 +30,7 @@ export const Navigator = () => {
   }, [pathname]);
 
   return (
-    <ul id="nav_top">
+    <ul className="nav_top">
       {navItems?.map((item, idx) => {
         return (
           <li

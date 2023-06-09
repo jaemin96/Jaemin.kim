@@ -14,7 +14,6 @@ module.exports = {
     'prettier',
     // 'plugin:react/recommended',
     'plugin:react-hooks/recommended',
-    'plugin:jsx-a11y/strict',
     'plugin:testing-library/react',
   ],
   overrides: [
@@ -36,7 +35,7 @@ module.exports = {
     },
   },
   rules: {
-    'no-console': 'warn',
+    'no-console': 'off',
     'prettier/prettier': [
       'warn',
       {

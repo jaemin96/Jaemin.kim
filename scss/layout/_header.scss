@@ -1,6 +1,26 @@
 /* Header style */
-#header_container {
+#header {
   display: flex;
   padding: 2rem;
   background-color: $cgray-6;
+}
+
+// Desktop (1024 <= W)
+@media screen and (min-width: 1024px) {
+  .expand_btn {
+    display: none;
+  }
+}
+
+// Tablet (768 <= W < 1024)
+@media screen and (max-width: 1023px) {
+}
+
+// Mobile (W < 768)
+@media screen and (max-width: 767px) {
+  #header {
+    .nav_top {
+      display: none;
+    }
+  }
 }

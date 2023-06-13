@@ -5,20 +5,24 @@ import { SlideModal } from '@/components/modal/slideModal';
 
 export const Header = () => {
   const [visible, setVisible] = useState<boolean>(false);
+  const openModal = () => {
+    setVisible(true);
+  };
 
-  const handleVisible = () => {
-    setVisible((prev) => !prev);
+  const closeModal = () => {
+    setVisible(false);
   };
 
   return (
     <div id="header">
       <Navigator />
-      <div onClick={handleVisible}>
+      <div className="expand_btn" onClick={openModal}>
         <MoreLIcon />
       </div>
-      <SlideModal visible={visible}>
+      <SlideModal visible={visible} closeModal={closeModal}>
         <div>
           <h1>Modal Content</h1>
+          <button onClick={closeModal}>X</button>
         </div>
       </SlideModal>
     </div>

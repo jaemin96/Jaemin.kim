@@ -13,7 +13,7 @@ const navItems = [
 export const Navigator = () => {
   const router = useRouter();
   const { pathname } = router;
-  const [selected, setSelected] = useState<string>();
+  const [selected, setSelected] = useState<string>('');
 
   useEffect(() => {
     if (pathname === '/') {
@@ -27,14 +27,15 @@ export const Navigator = () => {
     } else if (pathname === '/contact') {
       setSelected('/contact');
     }
-  }, [pathname]);
+  }, [router, pathname]);
 
   return (
-    <ul className="nav_top">
+    <ul className="navigator">
       {navItems?.map((item, idx) => {
         return (
+          // TODO: key값 uuid 사용해서 고유값 설정하기
           <li
-            className={`nav_top-item ${selected === item.path ? 'selected' : ''}`}
+            className={`navigator-item ${selected === item.path ? 'selected' : ''}`}
             key={`navItems__${idx}__${item.key}`}
           >
             <Link className="nav_link" href={`${item.path}`}>

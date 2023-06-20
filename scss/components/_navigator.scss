@@ -1,15 +1,15 @@
-.nav_top {
+.navigator {
   display: flex;
   gap: 1rem;
   list-style: none;
   background-color: $cgray-2;
-  .nav_top-item {
+  .navigator-item {
     .nav_link {
       color: $wgray-4;
     }
   }
 
-  .nav_top-item.selected {
+  .navigator-item.selected {
     .nav_link {
       color: $black;
       border-bottom: 1px solid $black;

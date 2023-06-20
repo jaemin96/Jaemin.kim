@@ -14,6 +14,7 @@ import LikeFillIcon from '../public/icon/like_fill.svg';
 import LikeOutlineIcon from '../public/icon/like_outline.svg';
 import LockIcon from '../public/icon/lock.svg';
 import LogoutIcon from '../public/icon/logout.svg';
+import MenuIcon from '../public/icon/menu.svg';
 import MoreLIcon from '../public/icon/more_L.svg';
 import MoreSIcon from '../public/icon/more_S.svg';
 import MyFillIcon from '../public/icon/my_fill.svg';
@@ -44,6 +45,7 @@ export {
   LikeOutlineIcon,
   LogoutIcon,
   LockIcon,
+  MenuIcon,
   MoreLIcon,
   MoreSIcon,
   MyFillIcon,

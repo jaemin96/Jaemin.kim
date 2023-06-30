@@ -1,12 +1,10 @@
-#slideModal {
+.slideModal {
   position: absolute;
   right: 0;
   top: 0;
   width: 100%;
   height: 100vh;
-}
 
-.slideModal {
   &-overlay {
     display: flex;
     justify-content: flex-end;
@@ -22,6 +20,9 @@
     height: 100%;
     z-index: 9999;
   }
+}
+
+.slideModal.open {
 }
 
 // Desktop (1024 <= W)

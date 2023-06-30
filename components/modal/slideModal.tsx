@@ -18,7 +18,7 @@ export const SlideModal = (props: SlideModalProps) => {
   return (
     <>
       {visible && (
-        <div id="slideModal" className={`slideModal ${visible ? 'open' : ''}`}>
+        <div className={`slideModal ${visible ? 'open' : ''}`}>
           <div className="slideModal-overlay" onClick={handleOutsideClick}>
             <div className="slideModal-content">{props.children}</div>
           </div>

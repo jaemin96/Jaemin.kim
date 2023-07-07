@@ -30,10 +30,9 @@ export const Navigator = () => {
   }, [router, pathname]);
 
   return (
-    <ul className="navigator">
+    <ul className="navigator sm:hidden">
       {navItems?.map((item, idx) => {
         return (
-          // TODO: key값 uuid 사용해서 고유값 설정하기
           <li
             className={`navigator-item ${selected === item.path ? 'selected' : ''}`}
             key={`navItems__${idx}__${item.key}`}

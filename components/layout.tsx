@@ -11,14 +11,14 @@ const Layout = (props: LayoutProps) => {
 
   if (router.pathname === '/404') {
     return (
-      <div id="container">
+      <div id="container" className="container mx-auto">
         <div>{props.children}</div>
       </div>
     );
   }
 
   return (
-    <div id="container">
+    <div id="container" className="container mx-auto">
       <div className="wrapper">
         <Header />
         <div>{props.children}</div>

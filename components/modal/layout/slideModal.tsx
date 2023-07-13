@@ -20,10 +20,10 @@ export const SlideModal = (props: SlideModalProps) => {
       {visible && (
         <div className={`slideModal ${visible ? 'open' : ''} absolute right-0 top-0 w-[100%] h-[100vh] lg:hidden`}>
           <div
-            className="slideModal-overlay flex justify-end w-[100%] h-[100%] bg-black/70"
+            className="slideModal-overlay flex justify-end w-[100%] h-[100%] bg-black-base/80"
             onClick={handleOutsideClick}
           >
-            <div className="slideModal-content flex w-[80%] h-[100%] z-50 bg-sky-200">{props.children}</div>
+            <div className="slideModal-content flex w-[80%] h-[100%] z-50 bg-tangerine-100">{props.children}</div>
           </div>
         </div>
       )}

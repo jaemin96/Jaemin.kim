@@ -1,6 +1,6 @@
 import { MenuIcon } from '@/components/icon';
 import { useState, useEffect } from 'react';
-import { SlideModal } from '@/components/modal/layout/slideModal';
+import { SlideModal } from '@/components/modal/layout';
 import { useRouter } from 'next/router';
 import { Navigator } from '@/components/navigator';
 import { Logo } from '@/components/logo';

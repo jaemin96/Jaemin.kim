@@ -6,6 +6,7 @@
 @layer components {
   .navigator {
   }
+
   .navigator-item {
     @apply text-black-500;
   }

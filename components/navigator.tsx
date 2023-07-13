@@ -10,7 +10,12 @@ const navItems = [
   { key: 'contact', label: 'Contact', path: '/contact' },
 ];
 
-export const Navigator = () => {
+type NavigatorProps = {
+  option?: string;
+};
+
+export const Navigator = (props: NavigatorProps) => {
+  const { option } = props;
   const router = useRouter();
   const { pathname } = router;
   const [selected, setSelected] = useState<string>('');
@@ -30,7 +35,7 @@ export const Navigator = () => {
   }, [router, pathname]);
 
   return (
-    <ul className="navigator sm:hidden">
+    <ul className={`navigator flex gap-[1rem] ${option}`}>
       {navItems?.map((item, idx) => {
         return (
           <li

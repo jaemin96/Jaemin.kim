@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* navigation */
+@layer components {
+  .navigator {
+  }
+  .navigator-item {
+    @apply text-black-500;
+  }
+
+  .navigator-item.selected {
+    border-bottom: 1px solid black;
+    @apply text-black-base;
+  }
+}

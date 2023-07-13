@@ -1,3 +1,3 @@
-import { SlideModal } from './slideModal';
+import { NavModal } from './navModal';
 
-export { SlideModal };
+export { NavModal };

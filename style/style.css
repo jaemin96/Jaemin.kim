@@ -12,7 +12,6 @@
   }
 
   .navigator-item.selected {
-    border-bottom: 1px solid black;
-    @apply text-black-base;
+    @apply text-black-base border-b-2 border-black-base;
   }
 }

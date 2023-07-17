@@ -35,7 +35,7 @@ export const Navigator = (props: NavigatorProps) => {
   }, [router, pathname]);
 
   return (
-    <ul className={`navigator flex gap-[1rem] ${option}`}>
+    <ul className={`navigator flex gap-[1.5rem] ${option}`}>
       {navItems?.map((item, idx) => {
         return (
           <li

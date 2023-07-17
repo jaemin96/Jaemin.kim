@@ -21,7 +21,7 @@ const Layout = (props: LayoutProps) => {
     <div id="container" className="container mx-auto">
       <div className="wrapper">
         <Header />
-        <div>{props.children}</div>
+        <div className="mt-[1.5rem]">{props.children}</div>
         {/* TODO: Add <Footer /> */}
       </div>
     </div>

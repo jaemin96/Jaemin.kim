@@ -18,14 +18,14 @@ export const NavModal = (props: NavModalProps) => {
   return (
     <div className="modal-nav w-[100%]">
       <div className="modal-nav-header flex justify-between p-[1.5rem]">
-        <h1>Modal Content</h1>
+        <div></div>
         <button onClick={closeModal}>X</button>
       </div>
-      <div className="modal-nav-content">
-        <Navigator option="flex-col items-center" />
+      <div className="modal-nav-content p-[1.5rem]">
+        <Navigator option="flex-col items-center slide-modal" />
       </div>
-      <div className="modal-nav-footer">
-        <ul className="contact-items">
+      <div className="modal-nav-footer p-[1.5rem] w-full flex justify-center">
+        <ul className="contact-items flex gap-[0.8rem]">
           <li>
             <GithubIcon width={25} height={25} />
           </li>

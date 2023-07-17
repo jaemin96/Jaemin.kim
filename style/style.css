@@ -8,10 +8,14 @@
   }
 
   .navigator-item {
-    @apply text-black-500;
+    @apply transition text-black-500 hover:text-black-100;
   }
 
   .navigator-item.selected {
-    @apply text-black-base border-b-2 border-black-base;
+    @apply text-black-base;
+  }
+
+  .slide-modal .navigator-item.selected {
+    @apply border-b-2 border-black-base;
   }
 }

@@ -1,7 +1,8 @@
+import { useContacts } from '@/hooks';
+import { Alink } from '@/utils';
 import React from 'react';
 import { Email2Icon, GithubIcon } from '../icon';
 import { Navigator } from '../navigator';
-import { useState, useEffect } from 'react';
 
 type NavModalProps = {
   closeModal: () => void;
@@ -9,11 +10,7 @@ type NavModalProps = {
 
 export const NavModal = (props: NavModalProps) => {
   const { closeModal } = props;
-  const [email, setEmail] = useState<string>('');
-
-  useEffect(() => {
-    setEmail('lemon__96@naver.com');
-  }, []);
+  const { email, github } = useContacts();
 
   return (
     <div className="modal-nav w-[100%]">
@@ -27,7 +24,9 @@ export const NavModal = (props: NavModalProps) => {
       <div className="modal-nav-footer p-[1.5rem] w-full flex justify-center">
         <ul className="contact-items flex gap-[0.8rem]">
           <li>
-            <GithubIcon width={25} height={25} />
+            <Alink url={github}>
+              <GithubIcon width={25} height={25} />
+            </Alink>
           </li>
           <li>
             <a href={`mailto:${email}`}>

@@ -1,8 +1,8 @@
 import Layout from '@/components/layout';
-import React from 'react';
+import { AppProps } from 'next/app';
 import '../style/style.css';
 
-const App = ({ Component, pageProps }) => {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <Layout>
       <Component {...pageProps} />
@@ -10,4 +10,9 @@ const App = ({ Component, pageProps }) => {
   );
 };
 
+export async function getServerSideProps() {
+  return {
+    props: {},
+  };
+}
 export default App;

@@ -4,8 +4,6 @@ import { useEffect, useState } from 'react';
 
 const navItems = [
   { key: 'home', label: 'Home', path: '/' },
-  { key: 'about', label: 'About me', path: '/about' },
-  { key: 'skill', label: 'Skill', path: '/skill' },
   { key: 'project', label: 'Project', path: '/projects' },
   { key: 'contact', label: 'Contact', path: '/contact' },
 ];
@@ -23,10 +21,6 @@ export const Navigator = (props: NavigatorProps) => {
   useEffect(() => {
     if (pathname === '/') {
       setSelected('/');
-    } else if (pathname === '/about') {
-      setSelected('/about');
-    } else if (pathname === '/skill') {
-      setSelected('/skill');
     } else if (pathname === '/projects') {
       setSelected('/projects');
     } else if (pathname === '/contact') {
@@ -35,7 +29,7 @@ export const Navigator = (props: NavigatorProps) => {
   }, [router, pathname]);
 
   return (
-    <ul className={`navigator flex gap-[1.5rem] ${option}`}>
+    <ul className={`navigator flex gap-[1.5rem] lg:gap-[2.4rem] lg:text-[1.1rem] lg:justify-center ${option}`}>
       {navItems?.map((item, idx) => {
         return (
           <li

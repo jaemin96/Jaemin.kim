@@ -22,11 +22,11 @@ export const Header = () => {
   }, [router, router.asPath]);
 
   return (
-    <div id="header" className="flex p-[2rem]">
+    <div id="header" className="flex p-[2rem] border-b-2 border-gray-warm-1">
       <div className="header_wrapper grid grid-cols-[30%,1fr,10%] w-full">
         <Logo />
         <Navigator option="sm:hidden" />
-        <div className="expand hidden sm:flex sm:col-start-3 sm:col-end-4">
+        <div className="expand hidden sm:flex sm:col-start-3 sm:col-end-4 sm:items-center sm:justify-end">
           <a className="expand_btn" onClick={openModal}>
             <MenuIcon />
           </a>

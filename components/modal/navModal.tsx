@@ -1,6 +1,5 @@
 import { useContacts } from '@/hooks';
 import { Alink } from '@/utils';
-import React from 'react';
 import { Email2Icon, GithubIcon } from '../icon';
 import { Navigator } from '../navigator';
 

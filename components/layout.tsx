@@ -1,5 +1,6 @@
-import { ReactNode } from 'react';
+import { ReactNode, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import ErrorPage from '@/pages/_error';
 import { Header } from '@/containers';
 
 type LayoutProps = {
@@ -8,21 +9,21 @@ type LayoutProps = {
 
 const Layout = (props: LayoutProps) => {
   const router = useRouter();
+  const [isError, setError] = useState<boolean>(false);
 
-  if (router.pathname === '/404') {
-    return (
-      <div id="container" className="container mx-auto">
-        <div>{props.children}</div>
-      </div>
-    );
+  useEffect(() => {
+    router?.pathname === '/_error' && setError(true);
+  }, [router]);
+
+  if (isError) {
+    return <ErrorPage />;
   }
 
   return (
-    <div id="container" className="container mx-auto">
-      <div className="wrapper">
-        <Header />
+    <div>
+      {!isError && <Header />}
+      <div className="container mx-auto">
         <div className="mt-[1.5rem]">{props.children}</div>
-        {/* TODO: Add <Footer /> */}
       </div>
     </div>
   );

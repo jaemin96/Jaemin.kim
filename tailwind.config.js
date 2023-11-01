@@ -99,6 +99,13 @@ module.exports = {
           800: '#102693',
           900: '#091a7a',
         },
+        custom: {
+          Emerald: '#B5E6E2',
+          gray: '#282828',
+          dark: '#121212',
+          light: '#FEFEFE',
+          blue: '#254edb',
+        },
       },
     },
   },

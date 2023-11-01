@@ -1,7 +1,7 @@
 import { ReactNode, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import ErrorPage from '@/pages/_error';
-import { Header } from '@/containers';
+// import { Header } from '@/containers';
 
 type LayoutProps = {
   children: ReactNode;
@@ -21,7 +21,7 @@ const Layout = (props: LayoutProps) => {
 
   return (
     <div>
-      {!isError && <Header />}
+      {/* {!isError && <Header />} */}
       <div className="container mx-auto">
         <div className="mt-[1.5rem]">{props.children}</div>
       </div>

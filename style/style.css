@@ -19,3 +19,27 @@
     @apply border-b-2 border-black-base;
   }
 }
+
+/* ========= SIDE =========== */
+#side .side_wrapper .tag-wrapper {
+  max-width: 55%;
+  max-height: 7rem;
+  flex-wrap: wrap;
+  margin: auto;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#side .side_wrapper .tag-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+#side .side_wrapper .side_wrapper-social ul .social-icons svg:hover {
+  fill: rgba(0, 0, 0, 0.3);
+  transition: 0.1s ease-in-out;
+}
+
+#side .side_wrapper .tag-wrapper .tag::before {
+  content: '#';
+}

@@ -24,6 +24,7 @@ import MoreLIcon from '../public/icon/more_L.svg';
 import MoreSIcon from '../public/icon/more_S.svg';
 import MyFillIcon from '../public/icon/my_fill.svg';
 import MyOutlineIcon from '../public/icon/my_outline.svg';
+import NotionIcon from '../public/icon/notion.svg';
 import PhotoFillIcon from '../public/icon/photo_fill.svg';
 import PhotoOutlineIcon from '../public/icon/photo_outline.svg';
 import PinFillIcon from '../public/icon/pin_fill.svg';
@@ -61,6 +62,7 @@ export {
   MoreSIcon,
   MyFillIcon,
   MyOutlineIcon,
+  NotionIcon,
   PhotoFillIcon,
   PhotoOutlineIcon,
   PinFillIcon,

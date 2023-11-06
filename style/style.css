@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css');
+
 /* navigation */
 @layer components {
   .navigator {
@@ -18,6 +20,10 @@
   .slide-modal .navigator-item.selected {
     @apply border-b-2 border-black-base;
   }
+}
+
+body {
+  font-family: 'pretendard variable', sans-serif;
 }
 
 /* ========= SIDE =========== */

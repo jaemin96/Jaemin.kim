@@ -12,7 +12,7 @@ export const Side = () => {
   return (
     <div
       id="side"
-      className="w-1/4 relative m-[1.5rem] pr-[1.5rem] border-r-2 border-solid border-gray-warm-3 sm:w-full sm:mx-auto sm:border-0"
+      className="relative sm:row-span-3 m-[1.5rem] pr-[1.5rem] border-r-2 border-solid border-gray-warm-3 sm:w-full sm:mx-auto sm:border-0"
     >
       <div className="side_wrapper flex flex-col gap-[2rem] h-full justify-between">
         <div className="pt-[8rem] sm:pt-[3rem] flex flex-col gap-[3rem]">

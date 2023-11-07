@@ -20,9 +20,7 @@ const Layout = (props: LayoutProps) => {
 
   return (
     <div>
-      <div>
-        <div>{props.children}</div>
-      </div>
+      <div className="h-[100vh]">{props.children}</div>
     </div>
   );
 };

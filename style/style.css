@@ -49,3 +49,13 @@ body {
 #side .side_wrapper .tag-wrapper .tag::before {
   content: '#';
 }
+
+/* ========= Content =========== */
+#content {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#content::-webkit-scrollbar {
+  display: none;
+}

@@ -16,7 +16,7 @@ export const Side = () => {
       id="side"
       className="relative sm:row-span-3 m-[1.5rem] pr-[1.5rem] sm:pr-0 sm:my-auto border-r-2  border-solid border-gray-warm-3 sm:w-full sm:mx-auto sm:border-r-0"
     >
-      <div className="side_wrapper flex flex-col gap-[2rem] justify-between">
+      <div className="side_wrapper flex flex-col gap-[2rem] h-full justify-between">
         <div className="pt-[8rem] sm:pt-[5rem] flex flex-col gap-[3rem]">
           {/* Section1. Side Title  */}
           <div className="side_wrapper-title text-center gap-[0.5rem] w-full font-bold text-[1.5rem]">

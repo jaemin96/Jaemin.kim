@@ -22,6 +22,10 @@
   }
 }
 
+html {
+  min-width: 356px;
+}
+
 body {
   font-family: 'pretendard variable', sans-serif;
 }
@@ -58,4 +62,18 @@ body {
 
 #content::-webkit-scrollbar {
   display: none;
+}
+
+#content #content-title {
+  position: relative;
+}
+
+#content #content-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0.15rem;
+  width: 1.5rem;
+  background-color: #254edb;
 }

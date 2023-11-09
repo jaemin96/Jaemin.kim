@@ -4,6 +4,8 @@ import { Alink } from '@/utils';
 import Image from 'next/image';
 import useContacts from '../hooks/useContacts';
 
+// TODO: Side 영역 공백 생기는 문제 해결하기
+
 export const Side = () => {
   const { github, notion } = useContacts();
 
@@ -12,10 +14,10 @@ export const Side = () => {
   return (
     <div
       id="side"
-      className="relative sm:row-span-3 m-[1.5rem] pr-[1.5rem] border-r-2 border-solid border-gray-warm-3 sm:w-full sm:mx-auto sm:border-0"
+      className="relative sm:row-span-3 m-[1.5rem] pr-[1.5rem] sm:pr-0 sm:my-auto border-r-2  border-solid border-gray-warm-3 sm:w-full sm:mx-auto sm:border-r-0"
     >
-      <div className="side_wrapper flex flex-col gap-[2rem] h-full justify-between">
-        <div className="pt-[8rem] sm:pt-[3rem] flex flex-col gap-[3rem]">
+      <div className="side_wrapper flex flex-col gap-[2rem] justify-between">
+        <div className="pt-[8rem] sm:pt-[5rem] flex flex-col gap-[3rem]">
           {/* Section1. Side Title  */}
           <div className="side_wrapper-title text-center gap-[0.5rem] w-full font-bold text-[1.5rem]">
             <h1>기록하는 개발자 김재민</h1>
@@ -60,7 +62,7 @@ export const Side = () => {
         </div>
         <div>
           {/* Section4. Side Copyright  */}
-          <div className="side_wrapper-copyright">
+          <div className="side_wrapper-copyright sm:hidden">
             <span className="flex justify-center w-full text-gray-warm-4">©2023. Jaemin Kim. All rights reserved.</span>
           </div>
         </div>

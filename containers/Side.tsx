@@ -1,5 +1,5 @@
 import { ThemeSwitch } from '@/components/button';
-import { GithubIcon, NotionIcon } from '@/components/icon';
+import { GithubIcon, NotionIcon, Email2Icon } from '@/components/icon';
 import { Alink } from '@/utils';
 import Image from 'next/image';
 import useContacts from '../hooks/useContacts';
@@ -7,7 +7,7 @@ import useContacts from '../hooks/useContacts';
 // TODO: Side 영역 공백 생기는 문제 해결하기
 
 export const Side = () => {
-  const { github, notion } = useContacts();
+  const { github, notion, email } = useContacts();
 
   const tagItems = ['React', 'Web', 'FE', '기록'];
 
@@ -47,6 +47,11 @@ export const Side = () => {
           {/* Section3. Side Social  */}
           <div className="side_wrapper-social pt-[0.5rem]">
             <ul className="flex justify-center w-full gap-[1rem]">
+              <li className="social-icons">
+                <Alink url={email}>
+                  <Email2Icon width={30} height={30} />
+                </Alink>
+              </li>
               <li className="social-icons">
                 <Alink url={github}>
                   <GithubIcon width={30} height={30} />

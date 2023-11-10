@@ -1,5 +1,4 @@
-import { ContentTitle } from './contentTitle';
-import { ContentWrapper } from './contentWrapper';
+import { ContentTitle, ContentWrapper } from './module';
 
 export const About = () => {
   return (

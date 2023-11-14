@@ -51,7 +51,6 @@ export const ThemeSwitch = () => {
             width={30}
             height={30}
             priority={true}
-            layout="fixed"
           />
           <span className="leading-loose">light mode</span>
         </li>
@@ -66,7 +65,6 @@ export const ThemeSwitch = () => {
             width={30}
             height={30}
             priority={true}
-            layout="fixed"
           />
           <span className="leading-loose">dark mode</span>
         </li>

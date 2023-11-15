@@ -77,3 +77,28 @@ body {
   width: 1.5rem;
   background-color: #254edb;
 }
+
+#content .expand-wrapper .icon-container {
+  transition: transform 0.3s ease-in-out;
+}
+
+#content .expand-wrapper .icon-container .expand-icon {
+  background: url('/icon/right.svg') center center/cover no-repeat;
+}
+
+#content .expand-wrapper.expanded .icon-container {
+  transform: rotate(90deg);
+}
+
+#content .expand-wrapper .expanded-wrapper {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+#content .expand-wrapper.expanded .expanded-wrapper {
+  border: 1px solid gray;
+  max-height: 50rem;
+  opacity: 1;
+}

@@ -7,6 +7,7 @@ export const ProgressBar = ({ percentage }: ProgressBarProps) => {
     <div className="flex gap-1 items-center m-1">
       <div className="progress-container bg-gray-cool-2 w-[13rem] h-[0.5rem] rounded-full">
         <div
+          id={`progress-bar-${percentage}`}
           className={`progress-bar h-full w-[${percentage}%] bg-gradient-to-r from-info-200 bg-info-600 rounded-full`}
         ></div>
       </div>

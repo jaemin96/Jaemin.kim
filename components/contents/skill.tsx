@@ -47,12 +47,22 @@ export const Skill = () => {
       <ContentTitle>Skill</ContentTitle>
       <ContentWrapper>
         <Expanded category="FE" skills={['React', 'Next', 'SCSS']}>
-          <div>
-            <ProgressBar percentage={80} />
+          <div className="mx-[0.5rem]">
+            <div className="flex items-center gap-1">
+              <h1>React</h1>
+              <ProgressBar percentage={80} />
+            </div>
+            <span className="text-[0.9rem] text-gray-warm-6">Skill에 대한 코멘트 작성 영역</span>
           </div>
         </Expanded>
         <Expanded category="BE" skills={['Nest', 'TypeORM']}>
-          <div>2</div>
+          <div className="mx-[0.5rem]">
+            <div className="flex items-center gap-1">
+              <h1>Nest</h1>
+              <ProgressBar percentage={40} />
+            </div>
+            <span className="text-[0.9rem] text-gray-warm-6">Skill에 대한 코멘트 작성 영역</span>
+          </div>
         </Expanded>
       </ContentWrapper>
     </div>

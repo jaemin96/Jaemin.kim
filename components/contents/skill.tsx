@@ -16,7 +16,13 @@ type ExpandProps = {
   children: ReactNode;
 };
 
-const Expanded = ({ category, skills, children }: ExpandProps) => {
+type ExpandedItemProps = {
+  title: string;
+  per: number;
+  children: ReactNode;
+};
+
+const Expand = ({ category, skills, children }: ExpandProps) => {
   const [isExpand, setIsExpand] = useState<boolean>(false);
 
   const handleExpand = () => {
@@ -24,7 +30,7 @@ const Expanded = ({ category, skills, children }: ExpandProps) => {
   };
 
   return (
-    <div className={`expand-wrapper ${isExpand ? 'expanded' : ''}`}>
+    <div className={`expand-wrapper ${isExpand ? 'expanded' : ''} `}>
       <div className="flex" onClick={handleExpand}>
         <h1>{`${category} | `}</h1>
         <ul className="flex gap-[0.5rem]">
@@ -41,29 +47,55 @@ const Expanded = ({ category, skills, children }: ExpandProps) => {
   );
 };
 
+const ExpandedItem = ({ title, per, children }: ExpandedItemProps) => {
+  return (
+    <div className="mx-[0.5rem]">
+      <div className="flex items-center gap-1">
+        <h1 className="min-w-[5rem] text-center">{title}</h1>
+        <ProgressBar id={`progress-bar-${title}${per}`} percentage={per} />
+      </div>
+      <p className="text-[0.9rem] text-gray-warm-6 max-w-[30rem]">{children}</p>
+    </div>
+  );
+};
+
 export const Skill = () => {
   return (
     <div id="skill" className="sm:flex sm:flex-col sm:items-center mt-[3rem] mb-[1rem]">
       <ContentTitle>Skill</ContentTitle>
       <ContentWrapper>
-        <Expanded category="FE" skills={['React', 'Next', 'SCSS']}>
-          <div className="mx-[0.5rem]">
-            <div className="flex items-center gap-1">
-              <h1>React</h1>
-              <ProgressBar percentage={80} />
-            </div>
-            <span className="text-[0.9rem] text-gray-warm-6">Skill에 대한 코멘트 작성 영역</span>
-          </div>
-        </Expanded>
-        <Expanded category="BE" skills={['Nest', 'TypeORM']}>
-          <div className="mx-[0.5rem]">
-            <div className="flex items-center gap-1">
-              <h1>Nest</h1>
-              <ProgressBar percentage={40} />
-            </div>
-            <span className="text-[0.9rem] text-gray-warm-6">Skill에 대한 코멘트 작성 영역</span>
-          </div>
-        </Expanded>
+        {/* SKILL - Part. Language  */}
+        <Expand category="Language" skills={['Javascript', 'Typescript']}>
+          <ExpandedItem title="Javascript" per={90}>
+            ES6+ 문법을 주로 사용하며 사용에 익숙한 수준입니다
+          </ExpandedItem>
+          <ExpandedItem title="Typescript" per={50}>
+            기본적인 문법 지식은 가지고 있으며 지속적으로 학습하고 있습니다
+          </ExpandedItem>
+        </Expand>
+        {/* SKILL - Part. FE  */}
+        <Expand category="FE" skills={['HTML', 'CSS', 'React', 'Next']}>
+          <ExpandedItem title="HTML" per={90}>
+            기본적인 태그에 대한 이해도가 있으며 실제 사용에도 익숙한 수준입니다
+          </ExpandedItem>
+          <ExpandedItem title="CSS" per={90}>
+            css에 대한 이해도가 높은 편이며 scss, tailwindcss 등 다양한 css 프레임워크 사용 경험이 있습니다
+          </ExpandedItem>
+          <ExpandedItem title="React" per={85}>
+            함수형 코드를 주로 사용하며 기본적인 hook에 대한 이해와 사용에 익숙한 수준입니다
+          </ExpandedItem>
+          <ExpandedItem title="Next" per={50}>
+            React 기반이기에 사용에는 익숙하며 SSR과 성능최적화에 초점을 두고 지속적으로 학습하고 있습니다
+          </ExpandedItem>
+        </Expand>
+        <Expand category="BE" skills={['node', 'TypeORM']}>
+          <ExpandedItem title="Node" per={50}>
+            약간의 지식과 간단한 RESTful API 작성 정도는 가능한 수준입니다. nest 프레임워크 사용 경험이 있습니다
+          </ExpandedItem>
+          <ExpandedItem title="TypeORM" per={60}>
+            Entity정의, 관계설정, 쿼리작성 등 기본적인 설정과 사용이 가능한 정도입니다
+          </ExpandedItem>
+        </Expand>
       </ContentWrapper>
     </div>
   );

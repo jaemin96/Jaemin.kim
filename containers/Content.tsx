@@ -8,8 +8,8 @@ export const Content = () => {
     >
       <About />
       <Skill />
-      <Project />
       <Experience />
+      <Project />
       <div className="side_wrapper-copyright hidden sm:block py-[1.5rem]">
         <span className="flex justify-center w-full text-gray-warm-4">©2023. Jaemin Kim. All rights reserved.</span>
       </div>

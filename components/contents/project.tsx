@@ -1,7 +1,6 @@
 import { Alink } from '@/utils';
+import Image from 'next/image';
 import { ContentTitle, ContentWrapper } from './module';
-
-// TODO: 사용 기술 스타일 정의, MyProject 컴포넌트 모듈 분리
 
 interface Links {
   type: string;
@@ -19,7 +18,9 @@ type MyProjectProps = {
 const MyProject = ({ thumbnail, skills, title, links, comment }: MyProjectProps) => {
   return (
     <div className="project_container sm:w-[28rem] flex border-2 mb-[1rem] last:mb-0">
-      <div className="thumbnail_wrapper w-[12rem] h-[10rem] border-2 sm:w-[18rem]">{thumbnail}</div>
+      <div className="thumbnail_wrapper w-[12rem] h-[10rem] border-r-2 sm:w-[18rem]">
+        <Image className="object-contain max-h-[100%]" src={thumbnail} alt={title} width={200} height={200} />
+      </div>
       <div className="info_wrapper m-[0.5rem] sm:w-full">
         <div className="flex">
           <h1 className="title">{title}</h1>
@@ -53,23 +54,13 @@ const MyProject = ({ thumbnail, skills, title, links, comment }: MyProjectProps)
 export const Project = () => {
   return (
     <div id="project" className="sm:flex sm:flex-col sm:items-center mt-[3rem] mb-[1rem]">
-      <ContentTitle>Project</ContentTitle>
+      <ContentTitle>Personal Projects</ContentTitle>
       <ContentWrapper>
         <MyProject
-          thumbnail="@"
+          thumbnail="/images/project-portfolio_thumbnail.png"
           title="웹 포트폴리오 페이지"
-          comment="프로젝트 소개 1"
-          skills={['react', 'scss', 'ts']}
-          links={[
-            { type: 'Github', url: 'github.com' },
-            { type: 'Notion', url: 'notion.so' },
-          ]}
-        />
-        <MyProject
-          thumbnail="@"
-          title="커넥트월렛"
-          comment="프로젝트 소개 2"
-          skills={['react', 'scss', 'ts']}
+          comment="개인 웹 포트폴리오 페이지 제작"
+          skills={['next.js', 'tailwindcss', 'ts']}
           links={[
             { type: 'Github', url: 'github.com' },
             { type: 'Notion', url: 'notion.so' },

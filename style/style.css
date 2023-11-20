@@ -98,7 +98,10 @@ body {
 }
 
 #content .expand-wrapper.expanded .expanded-wrapper {
-  border: 1px solid gray;
   max-height: 50rem;
   opacity: 1;
+}
+
+#content .skill-list li:not(:last-child)::after {
+  content: ',';
 }

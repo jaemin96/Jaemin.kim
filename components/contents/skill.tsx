@@ -30,8 +30,12 @@ const Expand = ({ category, skills, children }: ExpandProps) => {
   };
 
   return (
-    <div className={`expand-wrapper ${isExpand ? 'expanded' : ''} mb-[0.5rem]`}>
-      <div className="flex items-center" onClick={handleExpand}>
+    <div
+      className={`expand-wrapper ${isExpand ? 'expanded' : ''} mb-[0.5rem] sm:max-w-[25rem] max-w-[50rem] ${
+        isExpand && 'mb-[1.5rem]'
+      }`}
+    >
+      <div className="flex items-center">
         <div className="flex gap-1">
           <h1 className="font-extrabold">{`${category} : `}</h1>
           <ul className="skill-list flex gap-1 font-medium">
@@ -40,7 +44,7 @@ const Expand = ({ category, skills, children }: ExpandProps) => {
             })}
           </ul>
         </div>
-        <div className="icon-container w-[1rem] h-[1rem] ml-[0.3rem] mb-[0.2rem]">
+        <div className="icon-container w-[1rem] h-[1rem] ml-[0.3rem] mb-[0.2rem] cursor-pointer" onClick={handleExpand}>
           <div className="expand-icon  w-full h-full"></div>
         </div>
       </div>

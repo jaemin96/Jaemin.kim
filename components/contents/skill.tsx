@@ -33,7 +33,7 @@ const Expand = ({ category, skills, children }: ExpandProps) => {
     <div className={`expand-wrapper ${isExpand ? 'expanded' : ''} mb-[0.5rem]`}>
       <div className="flex items-center" onClick={handleExpand}>
         <div className="flex gap-1">
-          <h1 className="font-bold">{`${category} : `}</h1>
+          <h1 className="font-extrabold">{`${category} : `}</h1>
           <ul className="skill-list flex gap-1 font-medium">
             {skills?.map((skill, i) => {
               return <li key={i}>{skill}</li>;
@@ -51,7 +51,7 @@ const Expand = ({ category, skills, children }: ExpandProps) => {
 
 const ExpandedItem = ({ title, per, children }: ExpandedItemProps) => {
   return (
-    <div className="mx-[0.5rem]">
+    <div className="mx-[0.5rem] mb-[0.5rem]">
       <div className="flex items-center gap-1">
         <h1 className="min-w-[2.5rem]">{title}</h1>
         <ProgressBar id={`progress-bar-${title}${per}`} percentage={per} />
@@ -67,7 +67,7 @@ export const Skill = () => {
       <ContentTitle>Skill</ContentTitle>
       <ContentWrapper>
         {/* SKILL - Part. Language  */}
-        <Expand category="Language" skills={['Javascript', 'Typescript']}>
+        <Expand category="LANGUAGE" skills={['Javascript', 'Typescript']}>
           <ExpandedItem title="Javascript" per={90}>
             ES6+ 문법을 주로 사용하며 사용에 익숙한 수준입니다
           </ExpandedItem>
@@ -76,7 +76,7 @@ export const Skill = () => {
           </ExpandedItem>
         </Expand>
         {/* SKILL - Part. FE  */}
-        <Expand category="FE" skills={['HTML', 'CSS', 'React', 'Next']}>
+        <Expand category="FRONT-END" skills={['HTML', 'CSS', 'React', 'Next']}>
           <ExpandedItem title="HTML" per={90}>
             기본적인 태그에 대한 이해도가 있으며 실제 사용에도 익숙한 수준입니다
           </ExpandedItem>
@@ -90,7 +90,7 @@ export const Skill = () => {
             SSR과 성능최적화에 초점을 두고 지속적으로 학습하고 있습니다
           </ExpandedItem>
         </Expand>
-        <Expand category="BE" skills={['Node', 'TypeORM']}>
+        <Expand category="BACK-END" skills={['Node', 'TypeORM']}>
           <ExpandedItem title="Node" per={50}>
             약간의 지식과 간단한 RESTful API 작성 정도는 가능한 수준입니다. nest 프레임워크 사용 경험이 있습니다
           </ExpandedItem>

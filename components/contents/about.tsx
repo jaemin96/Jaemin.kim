@@ -3,7 +3,7 @@ import { ContentTitle, ContentWrapper } from './module';
 export const About = () => {
   return (
     <div id="about" className="sm:flex sm:flex-col sm:items-center mt-[3rem] sm:mt-[2rem] mb-[1rem]">
-      <ContentTitle>About Me</ContentTitle>
+      <ContentTitle>Intro</ContentTitle>
       <ContentWrapper>
         <div>
           <p className="sm:text-center sm:text-[1rem] font-light leading-7">

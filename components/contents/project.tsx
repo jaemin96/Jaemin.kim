@@ -17,8 +17,8 @@ type MyProjectProps = {
 
 const MyProject = ({ thumbnail, skills, title, links, comment }: MyProjectProps) => {
   return (
-    <div className="project_container sm:w-[28rem] flex border-2 mb-[1rem] last:mb-0">
-      <div className="thumbnail_wrapper w-[12rem] h-[10rem] border-r-2 sm:w-[18rem]">
+    <div className="project_container sm:w-[28rem] flex mb-[1rem] last:mb-0 max-w-[50rem] sm:max-w-[23rem] mb-[1.5rem]">
+      <div className="thumbnail_wrapper w-[12rem] h-[10rem] sm:w-[18rem] border-[1px] border-gray-cool-3">
         <Image className="object-contain max-h-[100%]" src={thumbnail} alt={title} width={200} height={200} />
       </div>
       <div className="info_wrapper m-[0.5rem] sm:w-full">

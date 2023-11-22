@@ -10,7 +10,7 @@ type TimelineItemProps = {
 const TimelineItem = ({ act, during, children }: TimelineItemProps) => {
   return (
     <div>
-      <div className="sm:flex sm:gap-2 sm:min-w-[25rem] sm:">
+      <div className="sm:flex sm:gap-2  sm:">
         <h1>{act}</h1>
         <h2>{during}</h2>
       </div>

@@ -4,7 +4,7 @@ export const Content = () => {
   return (
     <div
       id="content"
-      className="m-[1.5rem] pl-[3rem] row-span-2 sm:pl-0 flex flex-col gap-[1rem] md:overflow-auto lg:overflow-auto  col-span-3 sm:align-center"
+      className="m-[1.5rem] pl-[3rem] flex-[80%] row-span-2 sm:pl-0 flex flex-col gap-[1rem] md:overflow-auto lg:overflow-auto  col-span-3 sm:align-center"
     >
       <About />
       <Skill />

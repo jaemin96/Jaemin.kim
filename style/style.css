@@ -24,10 +24,12 @@
 
 html {
   min-width: 356px;
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'pretendard variable', sans-serif;
+  overflow-x: hidden;
 }
 
 /* ========= SIDE =========== */

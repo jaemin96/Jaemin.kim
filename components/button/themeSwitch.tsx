@@ -27,7 +27,7 @@ export const ThemeSwitch = () => {
     <div className="absolute top-0 right-0">
       <Image
         onClick={handleVisible}
-        className="relative mx-[1rem] cursor-pointer"
+        className="relative mx-[0.5rem] sm:mt-[0.5rem] cursor-pointer"
         src={`${currentTheme === 'light' ? '/images/sun-eye.png' : '/images/sun-glasses.png'}`}
         alt="화면모드"
         width={40}

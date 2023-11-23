@@ -1,14 +1,13 @@
+import { ThemeContext } from '@/asset/context';
 import Image from 'next/image';
-import { useState, createContext, useContext } from 'react';
+import { useState, useContext } from 'react';
 
 export const ThemeSwitch = () => {
   // popup state
   const [visible, setVisible] = useState<boolean>(false);
 
   // theme mode state
-  const [theme, setTheme] = useState<string>('light');
-  const themeContext = createContext(theme);
-  const currentTheme = useContext(themeContext);
+  const { theme, setTheme } = useContext(ThemeContext);
 
   const handleVisible = () => {
     setVisible(!visible);
@@ -27,8 +26,8 @@ export const ThemeSwitch = () => {
     <div className="absolute top-0 right-0">
       <Image
         onClick={handleVisible}
-        className="relative mx-[0.5rem] sm:mt-[0.5rem] cursor-pointer"
-        src={`${currentTheme === 'light' ? '/images/sun-eye.png' : '/images/sun-glasses.png'}`}
+        className="relative mx-[0.5rem] mt-[0.5rem] cursor-pointer"
+        src={`${theme === 'light' ? '/images/sun-eye.png' : '/images/sun-glasses.png'}`}
         alt="화면모드"
         width={40}
         height={40}
@@ -36,13 +35,14 @@ export const ThemeSwitch = () => {
       />
       {/* 모드 변경 팝업창 레이아웃 */}
       <ul
-        className={`${
-          visible || 'hidden'
-        } absolute top-0 right-0 mt-[3.5rem] flex flex-col font-bold theme_switch-popup m-[1rem] border w-[10rem] z-50 bg-gray-cool-1 shadow-lg rounded-lg`}
+        className={`${visible || 'hidden'} ${theme === 'light' ? 'bg-gray-cool-1' : 'bg-custom-gray'}
+        absolute top-0 right-0 mt-[3.5rem] flex flex-col font-bold theme_switch-popup m-[1rem] border w-[10rem] z-50  shadow-lg rounded-lg`}
       >
         <li
           onClick={() => handleThemeMode('light')}
-          className="flex gap-2 justify-center align-center w-full h-[100%] px-[1rem] py-[0.7rem] hover:bg-gray-warm-2 border-b-[0.1rem] rounded-t-lg cursor-pointer"
+          className={`flex gap-2 justify-center align-center w-full h-[100%] px-[1rem] py-[0.7rem] ${
+            theme === 'light' ? 'hover:bg-gray-warm-2' : 'hover:bg-custom-Emerald hover:text-custom-dark'
+          } border-b-[0.1rem] rounded-t-lg cursor-pointer`}
         >
           <Image
             className="object-contain"
@@ -56,7 +56,9 @@ export const ThemeSwitch = () => {
         </li>
         <li
           onClick={() => handleThemeMode('dark')}
-          className="flex gap-2 justify-center align-center w-full px-[1rem] py-[0.7rem] hover:bg-gray-warm-2 rounded-b-lg cursor-pointer"
+          className={`flex gap-2 justify-center align-center w-full px-[1rem] py-[0.7rem] ${
+            theme === 'light' ? 'hover:bg-gray-warm-2' : 'hover:bg-custom-Emerald hover:text-custom-dark'
+          } rounded-b-lg cursor-pointer`}
         >
           <Image
             className="object-contain"

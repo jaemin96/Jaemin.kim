@@ -47,8 +47,17 @@ body {
   display: none;
 }
 
-#side .side_wrapper .side_wrapper-social ul .social-icons svg:hover {
+#side .side_wrapper .side_wrapper-social ul .social-icons.light svg:hover {
   fill: rgba(0, 0, 0, 0.3);
+  transition: 0.1s ease-in-out;
+}
+
+#side .side_wrapper .side_wrapper-social ul .social-icons.dark svg {
+  fill: #c7c7c7;
+}
+
+#side .side_wrapper .side_wrapper-social ul .social-icons.dark svg:hover {
+  fill: #b5e6e2;
   transition: 0.1s ease-in-out;
 }
 
@@ -77,7 +86,6 @@ body {
   bottom: 0;
   height: 0.15rem;
   width: 1.5rem;
-  background-color: #254edb;
 }
 
 #content .expand-wrapper .icon-container {

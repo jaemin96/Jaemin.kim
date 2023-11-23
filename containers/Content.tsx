@@ -1,10 +1,15 @@
+import { ThemeContext } from '@/asset/context';
 import { About, Experience, Project, Skill } from '@/components/contents';
+import { useContext } from 'react';
 
 export const Content = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <div
       id="content"
-      className="m-[1.5rem] pl-[3rem] flex-[80%] row-span-2 sm:pl-0 flex flex-col gap-[1rem] md:overflow-auto lg:overflow-auto  col-span-3 sm:align-center"
+      className={`p-[1.5rem] pl-[3rem] flex-[80%] row-span-2 flex flex-col gap-[1rem] md:overflow-auto lg:overflow-auto col-span-3 sm:align-center ${
+        theme === 'light' ? '' : 'bg-custom-gray text-custom-light'
+      }`}
     >
       <About />
       <Skill />

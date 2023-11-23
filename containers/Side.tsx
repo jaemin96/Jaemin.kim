@@ -3,20 +3,23 @@ import { GithubIcon, NotionIcon, Email2Icon } from '@/components/icon';
 import { Alink } from '@/utils';
 import Image from 'next/image';
 import useContacts from '../hooks/useContacts';
-
-// TODO: Side 영역 공백 생기는 문제 해결하기
+import { useContext } from 'react';
+import { ThemeContext } from '@/asset/context';
 
 export const Side = () => {
   const { github, notion, email } = useContacts();
+  const { theme } = useContext(ThemeContext);
 
   const tagItems = ['React', 'Web', 'FE', '기록'];
 
   return (
     <div
       id="side"
-      className="relative flex-[20%] sm:flex-3 m-[1.5rem] pr-[1.5rem] sm:pr-0 sm:my-auto border-r-2 border-solid border-gray-warm-3 sm:w-full sm:mx-auto sm:border-r-0"
+      className={`relative flex-[20%] sm:flex-3 p-[1.5rem] pr-[1.5rem] sm:pr-0 sm:my-auto border-r-2 border-solid border-gray-warm-3 sm:w-full sm:mx-auto sm:border-r-0 ${
+        theme === 'light' ? 'bg-custom-light' : 'bg-custom-gray text-custom-light'
+      }`}
     >
-      <div className="side_wrapper flex flex-col gap-[2rem] h-full sm:min-h-[85%] justify-between">
+      <div className="side_wrapper flex flex-col  gap-[2rem] h-full sm:min-h-[85%] justify-between">
         <div className="pt-[8rem] sm:pt-[5rem] flex flex-col gap-[3rem]">
           {/* Section1. Side Title  */}
           <div className="side_wrapper-title text-center gap-[0.5rem] w-full font-bold text-[1.5rem]">
@@ -47,17 +50,17 @@ export const Side = () => {
           {/* Section3. Side Social  */}
           <div className="side_wrapper-social pt-[0.5rem]">
             <ul className="flex justify-center w-full gap-[1rem]">
-              <li className="social-icons">
+              <li className={`social-icons ${theme === 'light' ? 'light' : 'dark'}`}>
                 <Alink url={email}>
                   <Email2Icon width={30} height={30} />
                 </Alink>
               </li>
-              <li className="social-icons">
+              <li className={`social-icons ${theme === 'light' ? 'light' : 'dark'}`}>
                 <Alink url={github}>
                   <GithubIcon width={30} height={30} />
                 </Alink>
               </li>
-              <li className="social-icons">
+              <li className={`social-icons ${theme === 'light' ? 'light' : 'dark'}`}>
                 <Alink url={notion}>
                   <NotionIcon width={30} height={30} />
                 </Alink>
@@ -68,7 +71,9 @@ export const Side = () => {
         <div>
           {/* Section4. Side Copyright  */}
           <div className="side_wrapper-copyright sm:hidden">
-            <span className="flex justify-center w-full text-gray-warm-4">©2023. Jaemin Kim. All rights reserved.</span>
+            <span className={`flex justify-center w-full text-gray-warm-4 ${theme === 'dark' && 'text-gray-cool-5'}`}>
+              ©2023. Jaemin Kim. All rights reserved.
+            </span>
           </div>
         </div>
         <ThemeSwitch />

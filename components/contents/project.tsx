@@ -1,21 +1,9 @@
+import { Projects } from '@/asset/config';
 import { Alink } from '@/utils';
 import Image from 'next/image';
 import { ContentTitle, ContentWrapper } from './module';
 
-interface Links {
-  type: string;
-  url: string;
-}
-
-type MyProjectProps = {
-  thumbnail: string;
-  title: string;
-  skills: string[];
-  links: Links[];
-  comment: string;
-};
-
-const MyProject = ({ thumbnail, skills, title, links, comment }: MyProjectProps) => {
+const MyProject = ({ thumbnail, skills, title, links, comment }) => {
   return (
     <div className="project_container sm:w-[28rem] flex mb-[1rem] last:mb-0 max-w-[50rem] sm:max-w-[23rem] mb-[1.5rem]">
       <div className="thumbnail_wrapper w-[12rem] h-[10rem] sm:w-[18rem] border-[1px] border-gray-cool-3">
@@ -56,16 +44,18 @@ export const Project = () => {
     <div id="project" className="sm:flex sm:flex-col sm:items-center mt-[3rem] mb-[1rem]">
       <ContentTitle>Personal Projects</ContentTitle>
       <ContentWrapper>
-        <MyProject
-          thumbnail="/images/project-portfolio_thumbnail.png"
-          title="웹 포트폴리오 페이지"
-          comment="개인 웹 포트폴리오 페이지 제작"
-          skills={['next.js', 'tailwindcss', 'ts']}
-          links={[
-            { type: 'Github', url: 'github.com' },
-            { type: 'Notion', url: 'notion.so' },
-          ]}
-        />
+        {Projects?.map((data) => {
+          return (
+            <MyProject
+              key={data?.key}
+              thumbnail={data?.thumbnail}
+              title={data?.title}
+              comment={data?.comment}
+              skills={data?.skills}
+              links={data?.links}
+            />
+          );
+        })}
       </ContentWrapper>
     </div>
   );

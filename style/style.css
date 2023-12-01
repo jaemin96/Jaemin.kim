@@ -93,7 +93,11 @@ body {
 }
 
 #content .expand-wrapper .icon-container .expand-icon {
-  background: url('/icon/right.svg') center center/cover no-repeat;
+  background: center center/cover no-repeat;
+}
+
+#content .expand-wrapper .icon-container .expand-icon::after {
+  content: '>';
 }
 
 #content .expand-wrapper.expanded .icon-container {

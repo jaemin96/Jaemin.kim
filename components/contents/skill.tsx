@@ -1,13 +1,7 @@
 import { ContentTitle, ContentWrapper } from './module';
-import { ReactNode, useState } from 'react';
+import { ReactNode, useContext, useState } from 'react';
 import { ProgressBar } from '../progress';
-
-/** skill content TODO:list
- * -[] 토글 expand 스타일로 확장 폼 구현
- * -[] 타입 별 스킬 종류를 기재하고 확장 시 확장된 폼에서 스킬 숙련도 및 간단한 코멘트를 기재
- * -[] 확장영역 on/off 시 transition 및 스타일 적용
- * -[] 기술 숙련도를 나타내는 progress bar 구현
- */
+import { ThemeContext } from '@/asset/context';
 
 type ExpandProps = {
   multiple?: boolean;
@@ -23,6 +17,8 @@ type ExpandedItemProps = {
 };
 
 const Expand = ({ category, skills, children }: ExpandProps) => {
+  const { theme } = useContext(ThemeContext);
+
   const [isExpand, setIsExpand] = useState<boolean>(false);
 
   const handleExpand = () => {
@@ -35,7 +31,7 @@ const Expand = ({ category, skills, children }: ExpandProps) => {
         isExpand && 'mb-[1.5rem]'
       }`}
     >
-      <div className="flex items-center">
+      <div className="flex items-center sm:justify-center">
         <div className="flex gap-1">
           <h1 className="font-extrabold">{`${category} : `}</h1>
           <ul className="skill-list flex gap-1 font-medium">
@@ -44,23 +40,32 @@ const Expand = ({ category, skills, children }: ExpandProps) => {
             })}
           </ul>
         </div>
-        <div className="icon-container w-[1rem] h-[1rem] ml-[0.3rem] mb-[0.2rem] cursor-pointer" onClick={handleExpand}>
-          <div className="expand-icon  w-full h-full"></div>
+        <div className="icon-container ml-[0.5rem] cursor-pointer" onClick={handleExpand}>
+          <div className="expand-icon"></div>
         </div>
       </div>
-      <div className="expanded-wrapper mt-[0.3rem] shadow-md">{isExpand && children}</div>
+      <div
+        className={`expanded-wrapper my-[0.3rem] shadow-md ${theme === 'dark' ? 'bg-gray-cool-9' : ''} ${
+          isExpand && 'p-[0.5rem]'
+        }`}
+      >
+        {isExpand && children}
+      </div>
     </div>
   );
 };
 
 const ExpandedItem = ({ title, per, children }: ExpandedItemProps) => {
+  const { theme } = useContext(ThemeContext);
   return (
     <div className="mx-[0.5rem] mb-[0.5rem]">
       <div className="flex items-center gap-1">
         <h1 className="min-w-[2.5rem]">{title}</h1>
         <ProgressBar id={`progress-bar-${title}${per}`} percentage={per} />
       </div>
-      <p className="text-[0.9rem] text-gray-warm-6 max-w-[30rem]">{children}</p>
+      <p className={`text-[0.9rem] text-gray-warm-6 max-w-[30rem] ${theme === 'dark' ? 'text-gray-cool-4' : ''}`}>
+        {children}
+      </p>
     </div>
   );
 };

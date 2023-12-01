@@ -11,7 +11,7 @@ type TimelineItemProps = {
 const TimelineItem = ({ company, during, children }: TimelineItemProps) => {
   return (
     <div>
-      <div className="sm:flex sm:gap-2  sm:">
+      <div className="sm:flex sm:gap-2 sm:">
         <h1>{company}</h1>
         <h2>{during}</h2>
       </div>

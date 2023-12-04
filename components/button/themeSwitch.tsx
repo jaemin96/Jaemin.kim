@@ -2,6 +2,8 @@ import { ThemeContext } from '@/asset/context';
 import Image from 'next/image';
 import { useState, useContext } from 'react';
 
+type ThemeMode = 'light' | 'dark';
+
 export const ThemeSwitch = () => {
   // popup state
   const [visible, setVisible] = useState<boolean>(false);
@@ -13,11 +15,12 @@ export const ThemeSwitch = () => {
     setVisible(!visible);
   };
 
-  const handleThemeMode = (mode: string) => {
+  const handleThemeMode = (mode: ThemeMode) => {
     try {
       setTheme(mode);
-    } catch {
-      console.log('error');
+      localStorage.setItem('thememode', mode);
+    } catch (error) {
+      console.log({ error });
     }
     setVisible(false);
   };

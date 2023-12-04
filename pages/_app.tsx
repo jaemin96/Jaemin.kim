@@ -2,10 +2,15 @@ import Layout from '@/components/layout';
 import { AppProps } from 'next/app';
 import '../style/style.css';
 import { ThemeContext } from '@/asset/context';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [theme, setTheme] = useState<string>('light');
+
+  useEffect(() => {
+    const themeMode = localStorage.getItem('thememode');
+    setTheme(themeMode);
+  }, []);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

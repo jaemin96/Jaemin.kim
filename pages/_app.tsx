@@ -8,7 +8,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   const [theme, setTheme] = useState<string>('light');
 
   useEffect(() => {
-    const themeMode = localStorage.getItem('thememode');
+    const themeMode = localStorage.getItem('thememode') || 'light';
     setTheme(themeMode);
   }, []);
 

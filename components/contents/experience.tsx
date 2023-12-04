@@ -10,10 +10,11 @@ type TimelineItemProps = {
 
 const TimelineItem = ({ company, during, children }: TimelineItemProps) => {
   return (
-    <div>
-      <div className="sm:flex sm:gap-2 sm:">
-        <h1>{company}</h1>
-        <h2>{during}</h2>
+    <div className="flex sm:flex-col gap-[2rem] sm:gap-[1rem] mb-[2rem] sm:mb-[3rem]">
+      <div className="sm:flex sm:gap-2 sm:justify-center">
+        <h1 className="flex flex-col border-r-2 pr-[2rem] sm:pr-0 sm:flex-row sm:gap-2 sm:border-0">
+          {company} <span>{during}</span>
+        </h1>
       </div>
       <div>{children}</div>
     </div>
@@ -33,9 +34,12 @@ export const Experience = () => {
                   return (
                     <div key={project?.key}>
                       <h1>{project?.title}</h1>
-                      {project?.myAct?.map((act, i) => {
-                        return <li key={i}>{act}</li>;
-                      })}
+                      <h2>{project?.intro}</h2>
+                      <ul>
+                        {project?.myAct?.map((act, i) => {
+                          return <li key={i}>{act}</li>;
+                        })}
+                      </ul>
                     </div>
                   );
                 })}

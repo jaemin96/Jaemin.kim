@@ -16,7 +16,7 @@ interface WorkExperience {
 export const WorkExperiences: WorkExperience[] = [
   {
     key: '하버엑스',
-    company: '(주)하버엑스',
+    company: '(주) 하버엑스',
     during: '21. 06 ~ 23. 09',
     projects: [
       {
@@ -39,7 +39,7 @@ export const WorkExperiences: WorkExperience[] = [
       },
     ],
     contributes: [
-      'UI/UX 디자인 작업을 전담하여 디자이너와 맨투맨 협업을 진행하였고 프로젝트에서의 UI 개선 및 디자인 일관성을 유지함',
+      'UI/UX 디자인 작업을 전담하여 디자이너와 맨투맨 협업을 진행하였고 프로젝트 UI 개선 및 디자인 일관성을 유지함',
       'FE개발자로서 UI/UX 개발을 담당하였으며 부가적으로 BE개발자의 업무를 도와 업무 트래픽을 최소화함',
     ],
   },

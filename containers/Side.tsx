@@ -49,7 +49,7 @@ export const Side = () => {
           </div>
           {/* Section3. Side Social  */}
           <div className="side_wrapper-social pt-[0.5rem]">
-            <ul className="flex justify-center w-full gap-[1rem]">
+            <ul className="flex justify-center w-full gap-[1.3rem]">
               <li className={`social-icons ${theme === 'light' ? 'light' : 'dark'}`}>
                 <Alink url={email}>
                   <Email2Icon width={30} height={30} />

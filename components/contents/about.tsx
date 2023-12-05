@@ -14,7 +14,7 @@ export const About = () => {
   };
 
   return (
-    <div id="about" className="sm:flex sm:flex-col sm:items-center mt-[3rem] sm:mt-[2rem] mb-[1rem]">
+    <div id="about" className="sm:flex sm:flex-col sm:items-center sm:text-center mt-[3rem] sm:mt-[2rem] mb-[1rem]">
       <ContentTitle>Intro</ContentTitle>
       <ContentWrapper>
         <div>
@@ -25,7 +25,7 @@ export const About = () => {
             </p>
             <p>
               <Highlight> React</Highlight>를 주로 사용하여 <Highlight>웹 FE개발자</Highlight>
-              로서의 경험을 쌓고 있습니다. 새로운 기술이나 문법들을 배우고 공유할 수 있는 개발 문화를 지향합니다.
+              로서의 경험을 쌓고 있습니다.
             </p>
           </div>
         </div>

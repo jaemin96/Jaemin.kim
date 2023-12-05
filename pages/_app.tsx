@@ -1,6 +1,6 @@
 import Layout from '@/components/layout';
 import { AppProps } from 'next/app';
-import '../style/style.css';
+import '../style/style.scss';
 import { ThemeContext } from '@/asset/context';
 import { useEffect, useState } from 'react';
 

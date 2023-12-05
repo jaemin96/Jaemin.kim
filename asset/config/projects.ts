@@ -18,8 +18,8 @@ export const Projects: ProjectInfo[] = [
     key: 'web-portfolio',
     type: 'FE',
     title: '웹 포트폴리오 페이지',
-    comment: '개인 웹 포트폴리오 페이지 제작',
-    skills: ['next.js', 'tailwindcss', 'ts'],
+    comment: '개인 웹 포트폴리오 사이트 제작',
+    skills: ['TS', 'Next.js', 'tailwindcss'],
     thumbnail: '/images/project-portfolio_thumbnail.png',
     links: [
       { type: 'Github', url: 'https://github.com/jaemin96/Jaemin.kim' },

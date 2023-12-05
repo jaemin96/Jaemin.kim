@@ -1,33 +1,48 @@
 import { Projects } from '@/asset/config';
+import { ThemeContext } from '@/asset/context';
 import { Alink } from '@/utils';
 import Image from 'next/image';
+import { useContext } from 'react';
 import { ContentTitle, ContentWrapper } from './module';
 
 const MyProject = ({ thumbnail, skills, title, links, comment }) => {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <div className="project_container sm:w-[28rem] flex mb-[1rem] last:mb-0 max-w-[50rem] sm:max-w-[23rem] mb-[1.5rem]">
-      <div className="thumbnail_wrapper w-[12rem] h-[10rem] sm:w-[18rem] border-[1px] border-gray-cool-3">
+    <div className="project_container flex gap-[0.2rem] last:mb-0 mb-[2rem] max-w-[50rem] sm:max-w-[23rem] sm:w-[28rem]">
+      <div className="thumbnail_wrapper w-[10rem] h-[8rem] mr-[1rem] border-[1px] border-gray-cool-3 sm:w-[7rem] sm:h-[5rem]">
         <Image className="object-contain max-h-[100%]" src={thumbnail} alt={title} width={200} height={200} />
       </div>
-      <div className="info_wrapper m-[0.5rem] sm:w-full">
+      <div className="info_wrapper sm:w-full flex flex-col gap-1">
         <div className="flex">
-          <h1 className="title">{title}</h1>
+          <h1 className="title text-base font-extrabold">{title}</h1>
         </div>
-        <div className="">{comment}</div>
-        <div className="flex gap-1">
-          <span>사용 기술 :</span>
+        <div className="font-semibold">{comment}</div>
+        <div className="flex gap-1 text-base">
+          <span className="font-bold">사용 기술 :</span>
           <ul className="skill_wrapper flex gap-1">
             {skills?.map((skill, i) => {
-              return <li key={`${i}`}>{skill}</li>;
+              return (
+                <li key={`${i}`} className={`skill`}>
+                  {skill}
+                </li>
+              );
             })}
           </ul>
         </div>
-        <div className="flex gap-1">
-          <span>관련 링크 :</span>
-          <ul className="flex gap-1">
+        <div className="flex gap-1 text-base">
+          <span className="font-bold">관련 링크 :</span>
+          <ul className="project-links flex gap-2">
             {links?.map((item, i) => {
               return (
-                <li key={i}>
+                <li
+                  key={i}
+                  className={`link ${
+                    theme === 'light'
+                      ? 'light hover:text-gray-cool-3'
+                      : 'dark hover:text-custom-Emerald hover:border-custom-Emerald sm:text-custom-Emerald sm:border-custom-Emerald'
+                  }`}
+                >
                   <Alink url={`${item?.url}`}>{item?.type}</Alink>
                 </li>
               );

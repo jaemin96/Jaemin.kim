@@ -119,3 +119,25 @@ body {
 #content .skill-list li:not(:last-child)::after {
   content: ',';
 }
+
+#content .project-links .link a {
+  border-bottom: 1px #000 solid;
+}
+
+#content .project-links .link.dark a {
+  border-bottom: 1px #fff solid;
+}
+
+#content .project-links .link.light:hover a {
+  border-bottom: 2px #c7c7c7 solid;
+}
+
+#content .project-links .link.dark:hover a {
+  border-bottom: 2px #b5e6e2 solid;
+}
+
+@media screen and (max-width: 768px) {
+  #content .project-links .link.dark a {
+    border-bottom: 1px #b5e6e2 solid;
+  }
+}

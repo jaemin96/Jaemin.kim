@@ -60,9 +60,9 @@ body {
         }
         .social-icons.dark {
           svg {
-            fill: #c7c7c7;
+            fill: theme('colors.gray.cool.3');
             &:hover {
-              fill: #b5e6e2;
+              fill: theme('colors.custom.Emerald');
               transition: 0.1s ease-in-out;
             }
           }
@@ -145,17 +145,17 @@ body {
   .project-links {
     .link {
       a {
-        border-bottom: 1px #000 solid;
+        border-bottom: 1px theme('colors.black.base') solid;
       }
     }
 
     .link.dark {
       a {
-        border-bottom: 1px #fff solid;
+        border-bottom: 1px theme('colors.white.base') solid;
       }
       &:hover {
         a {
-          border-bottom: 2px #b5e6e2 solid;
+          border-bottom: 2px theme('colors.custom.Emerald') solid;
         }
       }
     }
@@ -163,7 +163,7 @@ body {
     .link.light {
       &:hover {
         a {
-          border-bottom: 2px #c7c7c7 solid;
+          border-bottom: 2px theme('colors.gray.cool.3') solid;
         }
       }
     }
@@ -175,7 +175,7 @@ body {
     .project-links {
       .link.dark {
         a {
-          border-bottom: 1px #b5e6e2 solid;
+          border-bottom: 1px theme('colors.custom.Emerald') solid;
         }
       }
     }

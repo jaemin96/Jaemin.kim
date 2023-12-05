@@ -168,6 +168,33 @@ body {
       }
     }
   }
+
+  #experience {
+    .experience {
+      &-project {
+        &-title {
+        }
+        &-intro {
+        }
+        &-acts {
+          .act {
+            &::before {
+              content: '-';
+              margin-right: 0.6rem;
+            }
+          }
+        }
+      }
+
+      &-contributes {
+        .contribute {
+          &::before {
+            content: '•';
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {

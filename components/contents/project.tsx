@@ -13,14 +13,18 @@ const MyProject = ({ thumbnail, skills, title, links, comment }) => {
       <div className="thumbnail_wrapper w-[10rem] h-[8rem] mr-[1rem] border-[1px] border-gray-cool-3 sm:w-[7rem] sm:h-[5rem]">
         <Image className="object-contain max-h-[100%]" src={thumbnail} alt={title} width={200} height={200} />
       </div>
-      <div className="info_wrapper sm:w-full flex flex-col gap-1">
-        <div className="flex">
-          <h1 className="title text-base font-extrabold">{title}</h1>
+      <div className="info_wrapper text-[0.9rem] sm:w-full flex flex-col gap-[0.15rem]">
+        <div className="flex flex-col mb-[0.3rem]">
+          <h1 className="title text-[1.05rem] font-extrabold">{title}</h1>
+          <div
+            className={`text-[0.84rem] font-semibold ${theme === 'light' ? 'text-gray-warm-5' : 'text-gray-cool-3'}`}
+          >
+            {comment}
+          </div>
         </div>
-        <div className="font-semibold">{comment}</div>
-        <div className="flex gap-1 text-base">
-          <span className="font-bold">사용 기술 :</span>
-          <ul className="skill_wrapper flex gap-1">
+        <div className="flex gap-1 text-[0.9rem] font-semibold">
+          <span>사용 기술 :</span>
+          <ul className="skill_wrapper flex gap-1 text-[0.95rem]">
             {skills?.map((skill, i) => {
               return (
                 <li key={`${i}`} className={`skill`}>
@@ -30,9 +34,9 @@ const MyProject = ({ thumbnail, skills, title, links, comment }) => {
             })}
           </ul>
         </div>
-        <div className="flex gap-1 text-base">
-          <span className="font-bold">관련 링크 :</span>
-          <ul className="project-links flex gap-2">
+        <div className="flex gap-1 text-[0.9rem] font-semibold">
+          <span>관련 링크 :</span>
+          <ul className="project-links flex gap-2 text-[0.95rem]">
             {links?.map((item, i) => {
               return (
                 <li

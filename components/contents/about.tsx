@@ -26,7 +26,7 @@ export const About = () => {
       <ContentTitle>Intro</ContentTitle>
       <ContentWrapper>
         <div>
-          <div className="sm:text-[0.9rem] leading-7">
+          <div className="text-[1.08rem] leading-7">
             <p>
               <Highlight>기록</Highlight>하고 정리하는 것을 좋아하는
               <MobileBr />
@@ -35,7 +35,7 @@ export const About = () => {
             <p className="whitespace-nowrap">
               <Highlight> React</Highlight>를 주로 사용하여
               <MobileBr />
-              <Highlight>웹 FE개발자</Highlight>
+              <Highlight> 웹 FE개발자</Highlight>
               로서의 경험을 쌓고 있습니다.
             </p>
           </div>

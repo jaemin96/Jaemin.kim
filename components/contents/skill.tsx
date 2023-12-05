@@ -60,10 +60,12 @@ const ExpandedItem = ({ title, per, children }: ExpandedItemProps) => {
   return (
     <div className="mx-[0.5rem] mb-[0.5rem]">
       <div className="flex items-center gap-1">
-        <h1 className="min-w-[2.5rem]">{title}</h1>
+        <h1 className={`min-w-[2.5rem] font-semibold ${theme === 'dark' ? 'text-custom-Emerald' : 'text-info-800'}`}>
+          {title}
+        </h1>
         <ProgressBar id={`progress-bar-${title}${per}`} percentage={per} />
       </div>
-      <p className={`text-[0.9rem] text-gray-warm-6 max-w-[30rem] ${theme === 'dark' ? 'text-gray-cool-4' : ''}`}>
+      <p className={`text-[0.9rem] max-w-[30rem] ${theme === 'dark' ? 'text-gray-cool-3' : 'text-gray-cool-5'}`}>
         {children}
       </p>
     </div>

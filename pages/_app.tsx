@@ -10,7 +10,13 @@ const App = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     const themeMode = localStorage.getItem('thememode') || 'light';
     setTheme(themeMode);
-  }, []);
+
+    if (themeMode === 'dark') document.body.style.backgroundColor = '#282828';
+
+    return () => {
+      document.body.style.backgroundColor = '';
+    };
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

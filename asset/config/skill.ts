@@ -81,8 +81,8 @@ export const Skills: SkillsInfo[] = [
       {
         key: 'aws',
         skill: 'AWS',
-        percentage: 50,
-        comment: '기본적인 문법 지식은 가지고 있으며 지속적으로 학습하고 있습니다',
+        percentage: 60,
+        comment: '기본 사용에 익숙하며 S3, cloud-front, parameter-store를 주로 사용했습니다',
       },
     ],
   },

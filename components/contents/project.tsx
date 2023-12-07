@@ -9,7 +9,11 @@ const MyProject = ({ thumbnail, skills, title, links, comment }) => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className="project_container flex gap-[0.2rem] last:mb-0 mb-[2rem] max-w-[50rem] sm:max-w-[23rem] sm:w-[28rem]">
+    <div
+      className={`project_container p-[1rem] flex gap-[0.2rem] last:mb-0 mb-[1rem] max-w-[40rem] sm:max-w-[22rem]  ${
+        theme === 'light' ? '' : 'bg-gray-cool-9'
+      }`}
+    >
       <div className="thumbnail_wrapper w-[10rem] h-[8rem] mr-[1rem] border-[1px] border-gray-cool-3 sm:w-[7rem] sm:h-[5rem]">
         <Image className="object-contain max-h-[100%]" src={thumbnail} alt={title} width={200} height={200} />
       </div>

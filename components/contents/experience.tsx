@@ -13,9 +13,13 @@ const TimelineItem = ({ company, during, children }: TimelineItemProps) => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className="flex sm:flex-col gap-[2rem] sm:gap-[1rem] mb-[2rem] sm:mb-[3rem]">
+    <div
+      className={`flex sm:flex-col gap-[2rem] sm:gap-[1rem] mb-[2rem] sm:mb-[3rem] p-[1rem] sm:max-w-[25rem] max-w-[55rem] ${
+        theme === 'light' ? '' : 'bg-gray-cool-9'
+      }`}
+    >
       <div className="sm:flex sm:gap-2 sm:justify-center">
-        <h1 className="flex flex-col text-lg font-bold border-r-2 border-gray-cool-3 pr-[2rem] sm:pr-0 sm:flex-row sm:items-center sm:gap-2 sm:border-0">
+        <h1 className="flex flex-col text-lg whitespace-nowrap font-bold border-r-2 border-gray-cool-3 pr-[2rem] sm:pr-0 sm:flex-row sm:items-center sm:gap-2 sm:border-0">
           {company}
           <span className={`text-sm font-semibold ${theme === 'light' ? 'text-gray-cool-5' : 'text-gray-cool-3'}`}>
             {during}

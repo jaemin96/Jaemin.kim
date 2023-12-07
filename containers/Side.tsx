@@ -15,7 +15,7 @@ export const Side = () => {
   return (
     <div
       id="side"
-      className={`relative flex-[20%] sm:flex-3 p-[1.5rem] pr-[1.5rem] sm:my-auto border-r-2 border-solid border-gray-warm-3 sm:w-full sm:mx-auto sm:border-r-0 ${
+      className={`relative flex-[20%] md:flex-[30%] lg:flex-[20%] sm:flex-3 p-[1.5rem] pr-[1.5rem] sm:my-auto border-r-2 border-solid border-gray-warm-3 sm:w-full sm:mx-auto sm:border-r-0 ${
         theme === 'light' ? 'bg-custom-light' : 'bg-custom-gray text-custom-light'
       }`}
     >

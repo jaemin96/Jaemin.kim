@@ -45,9 +45,9 @@ const Expand = ({ category, skills, children }: ExpandProps) => {
         </div>
       </div>
       <div
-        className={`expanded-wrapper my-[0.3rem] shadow-md ${theme === 'dark' ? 'bg-gray-cool-9' : ''} ${
-          isExpand && 'p-[0.5rem]'
-        }`}
+        className={`expanded-wrapper my-[0.3rem] border-[0.1rem] border-gray-cool-2 ${
+          theme === 'dark' ? 'bg-gray-cool-9 border-[0px]' : ''
+        } ${isExpand && 'p-[0.5rem]'}`}
       >
         {isExpand && children}
       </div>
@@ -65,7 +65,7 @@ const ExpandedItem = ({ title, per, children }: ExpandedItemProps) => {
         </h1>
         <ProgressBar id={`progress-bar-${title}${per}`} percentage={per} />
       </div>
-      <p className={`text-[0.9rem] max-w-[30rem] ${theme === 'dark' ? 'text-gray-cool-3' : 'text-gray-cool-5'}`}>
+      <p className={`text-[0.9rem] max-w-[30rem] ${theme === 'dark' ? 'text-gray-cool-3' : 'text-gray-cool-6'}`}>
         {children}
       </p>
     </div>

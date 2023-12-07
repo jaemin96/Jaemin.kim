@@ -70,7 +70,7 @@ export const Skills: SkillsInfo[] = [
         key: 'node',
         skill: 'Node',
         percentage: 50,
-        comment: '간단한 RESTful API 작성 정도는 가능하며, express와 nest 프레임워크 사용 경험이 있습니다',
+        comment: 'express.js 와 nest.js 프레임워크 사용 경험이 있습니다',
       },
       {
         key: 'typeORM',

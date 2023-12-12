@@ -13,7 +13,7 @@ const Home = () => {
         description={`김재민's 웹 포트폴리오`}
         ogTitle={`김재민's 포트폴리오`}
         ogDescription={`Web FE Engineer with React`}
-        ogImage={`/public/images/avatar.jpeg`}
+        ogImage={`https://raw.githubusercontent.com/jaemin96/Jaemin.kim/main/public/images/avatar.jpeg`}
         ogUrl={`https://www.jaemin96.com/`}
       />
       <div

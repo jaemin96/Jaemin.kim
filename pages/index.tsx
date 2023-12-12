@@ -1,6 +1,6 @@
 import { ThemeContext } from '@/asset/context';
 import { Content, Side } from '@/containers';
-import Head from 'next/head';
+import { Meta } from '@/utils';
 import { useContext } from 'react';
 
 const Home = () => {
@@ -8,9 +8,14 @@ const Home = () => {
 
   return (
     <div className="mx-auto">
-      <Head>
-        <title>Jaemin.kim</title>
-      </Head>
+      <Meta
+        title={'Jaemin.kim'}
+        description={`김재민's 웹 포트폴리오`}
+        ogTitle={`김재민's 포트폴리오`}
+        ogDescription={`Web FE Engineer with React`}
+        ogImage={`/public/images/avatar.jpeg`}
+        ogUrl={`https://www.jaemin96.com/`}
+      />
       <div
         className={`flex sm:flex-col sm:gap-3 h-[100vh] mx-auto w-full ${
           theme === 'light' ? '' : 'sm:bg-custom-gray '

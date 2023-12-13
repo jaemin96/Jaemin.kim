@@ -27,7 +27,7 @@ const MyProject = ({ thumbnail, skills, title, links, comment }) => {
           </div>
         </div>
         <div className="flex gap-1 text-[0.9rem] font-semibold">
-          <span>사용 기술 :</span>
+          <span className="whitespace-nowrap">사용 기술 :</span>
           <ul className="skill_wrapper flex gap-1 text-[0.95rem]">
             {skills?.map((skill, i) => {
               return (

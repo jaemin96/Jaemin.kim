@@ -23,7 +23,7 @@ export const Side = () => {
         <div className="pt-[8rem] sm:pt-[5rem] flex flex-col gap-[3rem]">
           {/* Section1. Side Title  */}
           <div className="side_wrapper-title text-center gap-[0.5rem] w-full font-bold text-[1.5rem]">
-            <h1>기록하는 개발자 김재민</h1>
+            <span>기록하는 개발자 김재민</span>
           </div>
           {/* Section2. Side Profile  */}
           <div className="side_wrapper-profile flex flex-col gap-[1rem]">

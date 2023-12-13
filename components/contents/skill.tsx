@@ -27,7 +27,7 @@ const Expand = ({ category, skills, children }: ExpandProps) => {
     >
       <div className="flex items-center sm:justify-center">
         <div className="flex gap-1">
-          <h1 className="font-extrabold">{`${category} : `}</h1>
+          <span className="font-extrabold">{`${category} : `}</span>
           <ul className="skill-list flex gap-1 font-medium">
             {skills?.map((skill, i) => {
               return <li key={i}>{skill}</li>;

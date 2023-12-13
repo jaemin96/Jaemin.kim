@@ -10,7 +10,7 @@ export const About = () => {
   const { theme } = useContext(ThemeContext);
 
   const Highlight = ({ children }: HighlightProps) => {
-    return <span className={`font-bold ${theme === 'dark' ? 'text-custom-Emerald' : ''}`}>{children}</span>;
+    return <span className={`${theme === 'dark' ? 'font-bold text-custom-Emerald' : ''}`}>{children}</span>;
   };
 
   const MobileBr = () => {
@@ -26,7 +26,7 @@ export const About = () => {
       <ContentTitle>Intro</ContentTitle>
       <ContentWrapper>
         <div>
-          <div className="text-[1.08rem] sm:text-[0.92rem] leading-7">
+          <div className="text-[0.95rem] sm:text-[0.92rem] leading-7">
             <p>
               <Highlight>기록</Highlight>하고 정리하는 것을 좋아하는
               <MobileBr />

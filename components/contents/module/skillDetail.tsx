@@ -13,12 +13,12 @@ export const SkillDetail = ({ skill, percentage, children }: SkillDetailProps) =
   return (
     <div className="mx-[0.5rem] mb-[0.5rem]">
       <div className="flex items-center gap-1">
-        <h1 className={`min-w-[2.5rem] font-semibold ${theme === 'dark' ? 'text-custom-Emerald' : 'text-info-800'}`}>
+        <span className={`font-semibold text-[0.9rem] ${theme === 'dark' ? 'text-custom-Emerald' : 'text-info-800'}`}>
           {skill}
-        </h1>
+        </span>
         <ProgressBar id={`progress-bar-${skill}${percentage}`} percentage={percentage} />
       </div>
-      <p className={`text-[0.9rem] max-w-[30rem] ${theme === 'dark' ? 'text-gray-cool-3' : 'text-gray-cool-6'}`}>
+      <p className={`text-[0.85rem] max-w-[30rem] ${theme === 'dark' ? 'text-gray-cool-3' : 'text-gray-cool-8'}`}>
         {children}
       </p>
     </div>

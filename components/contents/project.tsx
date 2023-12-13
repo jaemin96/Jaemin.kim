@@ -19,16 +19,16 @@ const MyProject = ({ thumbnail, skills, title, links, comment }) => {
       </div>
       <div className="info_wrapper text-[0.9rem] sm:w-full flex flex-col gap-[0.15rem]">
         <div className="flex flex-col mb-[0.3rem]">
-          <h1 className="title text-[1.05rem] font-extrabold">{title}</h1>
+          <h1 className="title text-[1rem] font-extrabold">{title}</h1>
           <div
             className={`text-[0.84rem] font-semibold ${theme === 'light' ? 'text-gray-warm-5' : 'text-gray-cool-3'}`}
           >
             {comment}
           </div>
         </div>
-        <div className="flex gap-1 text-[0.9rem] font-semibold">
-          <span>사용 기술 :</span>
-          <ul className="skill_wrapper flex gap-1 text-[0.95rem]">
+        <div className="flex gap-1 text-[0.85rem] sm:text-[0.9rem] font-semibold">
+          <span className="whitespace-nowrap">사용 기술 :</span>
+          <ul className="skill_wrapper flex gap-1">
             {skills?.map((skill, i) => {
               return (
                 <li key={`${i}`} className={`skill`}>
@@ -38,9 +38,9 @@ const MyProject = ({ thumbnail, skills, title, links, comment }) => {
             })}
           </ul>
         </div>
-        <div className="flex gap-1 text-[0.9rem] font-semibold">
+        <div className="flex gap-1 text-[0.85rem] sm:text-[0.9rem] font-semibold">
           <span>관련 링크 :</span>
-          <ul className="project-links flex gap-2 text-[0.95rem]">
+          <ul className="project-links flex gap-2">
             {links?.map((item, i) => {
               return (
                 <li

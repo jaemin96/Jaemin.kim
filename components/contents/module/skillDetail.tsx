@@ -18,7 +18,7 @@ export const SkillDetail = ({ skill, percentage, children }: SkillDetailProps) =
         </span>
         <ProgressBar id={`progress-bar-${skill}${percentage}`} percentage={percentage} />
       </div>
-      <p className={`text-[0.85rem] max-w-[30rem] ${theme === 'dark' ? 'text-gray-cool-3' : 'text-gray-cool-6'}`}>
+      <p className={`text-[0.85rem] max-w-[30rem] ${theme === 'dark' ? 'text-gray-cool-3' : 'text-gray-cool-8'}`}>
         {children}
       </p>
     </div>

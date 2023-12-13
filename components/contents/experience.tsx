@@ -21,7 +21,7 @@ const TimelineItem = ({ company, during, children }: TimelineItemProps) => {
       <div className="sm:flex sm:gap-2 sm:justify-center">
         <h1 className="flex flex-col text-lg whitespace-nowrap font-bold border-r-2 border-gray-cool-3 pr-[2rem] sm:pr-0 sm:flex-row sm:items-center sm:gap-2 sm:border-0">
           {company}
-          <span className={`text-sm font-semibold ${theme === 'light' ? 'text-gray-cool-5' : 'text-gray-cool-3'}`}>
+          <span className={`text-sm font-semibold ${theme === 'light' ? 'text-gray-cool-6' : 'text-gray-cool-3'}`}>
             {during}
           </span>
         </h1>

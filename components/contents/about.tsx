@@ -10,7 +10,7 @@ export const About = () => {
   const { theme } = useContext(ThemeContext);
 
   const Highlight = ({ children }: HighlightProps) => {
-    return <span className={`font-bold ${theme === 'dark' ? 'text-custom-Emerald' : ''}`}>{children}</span>;
+    return <span className={`${theme === 'dark' ? 'font-bold text-custom-Emerald' : ''}`}>{children}</span>;
   };
 
   const MobileBr = () => {

@@ -71,7 +71,7 @@ export const Side = () => {
         <div>
           {/* Section4. Side Copyright  */}
           <div className="side_wrapper-copyright sm:hidden">
-            <span className={`flex justify-center w-full text-gray-warm-4 ${theme === 'dark' && 'text-gray-cool-5'}`}>
+            <span className={`flex justify-center w-full text-gray-warm-6 ${theme === 'dark' && 'text-gray-cool-5'}`}>
               ©2023. Jaemin Kim. All rights reserved.
             </span>
           </div>

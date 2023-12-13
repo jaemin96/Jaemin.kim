@@ -22,7 +22,7 @@ export const ProgressBar = ({ id, percentage }: ProgressBarProps) => {
           }`}
         ></div>
       </div>
-      <span className={`text-[0.8rem] ${theme === 'light' ? 'text-info-800' : 'text-custom-Emerald'}`}>
+      <span className={`text-[0.75rem] ${theme === 'light' ? 'text-info-800' : 'text-custom-Emerald'}`}>
         {percentage}%
       </span>
     </div>

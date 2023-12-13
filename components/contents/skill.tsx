@@ -27,15 +27,19 @@ const Expand = ({ category, skills, children }: ExpandProps) => {
     >
       <div className="flex items-center sm:justify-center">
         <div className="flex gap-1">
-          <span className="font-extrabold">{`${category} : `}</span>
+          <span className="font-extrabold text-[0.9rem]">{`${category} : `}</span>
           <ul className="skill-list flex gap-1 font-medium">
             {skills?.map((skill, i) => {
-              return <li key={i}>{skill}</li>;
+              return (
+                <li key={i} className="text-[0.9rem] font-bold">
+                  {skill}
+                </li>
+              );
             })}
           </ul>
         </div>
         <div className="icon-container ml-[0.5rem] cursor-pointer" onClick={handleExpand}>
-          <div className="expand-icon"></div>
+          <div className="expand-icon text-[0.9rem] font-black"></div>
         </div>
       </div>
       <div

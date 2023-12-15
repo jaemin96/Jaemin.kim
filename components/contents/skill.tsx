@@ -78,7 +78,7 @@ export const Skill = () => {
             );
           })}
         </Expand>
-        <Expand category="BACK-END" skills={['Node', 'TypeORM']}>
+        <Expand category="BACK-END" skills={['Node', 'TypeORM', 'AWS']}>
           {Skills.filter((skill) => skill.key === 'BE')[0]?.skillList?.map((data) => {
             return (
               <SkillDetail key={data?.key} skill={data?.skill} percentage={data?.percentage}>

@@ -7,7 +7,7 @@ export const Content = () => {
   return (
     <div
       id="content"
-      className={`p-[1.5rem] pl-[3rem] sm:pl-[1.5rem] flex-[80%] row-span-2 flex flex-col gap-[1rem] md:overflow-auto lg:overflow-auto col-span-3 sm:align-center ${
+      className={`p-[1.5rem] pl-[3rem] sm:pl-[1.5rem] flex-[75%] row-span-2 flex flex-col gap-[1rem] md:overflow-auto lg:overflow-auto col-span-3 sm:align-center ${
         theme === 'light' ? '' : 'bg-custom-gray text-custom-light'
       }`}
     >

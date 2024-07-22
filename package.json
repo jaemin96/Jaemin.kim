@@ -6,10 +6,10 @@
   "author": "jaemin <jaemin96@users.noreply.github.com>",
   "license": "MIT",
   "private": true,
-  "packageManager": "yarn@1.22.19",
+  "packageManager": "yarn@1.22.18",
   "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=8.0.0",
+    "node": "v20.11.1",
+    "npm": "v10.2.4",
     "yarn": ">=1.22.0"
   },
   "eslintConfig": {

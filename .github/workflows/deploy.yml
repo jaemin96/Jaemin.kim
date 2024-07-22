@@ -4,7 +4,7 @@ name: deploy workflow
 on:
   push:
     branches:
-      - main
+      - node-version-up
 
 # 그에 따른 수행
 jobs:
@@ -14,13 +14,13 @@ jobs:
       - uses: actions/checkout@v2 # 깃 소스코드 clone 수행
       # node 설치
       - name: Set Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '16.15.1' # 현재 개발에 사용되는 노드버전 기재함.
+          node-version: '20.11.1' # 현재 개발에 사용되는 노드버전 기재함.
 
       # 개발환경 PM이 yarn 이므로 yarn 설치 플로우 추가
       - name: Install Yarn
-        run: npm install -g yarn
+        run: npm install -g yarn@1.22.18
 
       # 의존성 패키지 설치
       - name: Install dependencies
@@ -29,3 +29,9 @@ jobs:
       # 빌드
       - name: Build
         run: yarn build
+        
+      # 빌드 실패 (슬랙 노티 발송)
+      - name: Notify Slack on failure
+        if: failure()
+        run: |
+          curl -X POST -H 'Content-type: application/json' --data "{\"text\": \"🚨 Build failed in repository '${{ github.repository }}' on job '${{ github.workflow }}' \"}" ${{ secrets.SLACK_WEBHOOK_URL }}

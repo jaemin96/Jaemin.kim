@@ -4,7 +4,7 @@ name: deploy workflow
 on:
   push:
     branches:
-      - node-version-up
+      - main
 
 # 그에 따른 수행
 jobs:
@@ -29,7 +29,7 @@ jobs:
       # 빌드
       - name: Build
         run: yarn build
-        
+
       # 빌드 실패 (슬랙 노티 발송)
       - name: Notify Slack on failure
         if: failure()
